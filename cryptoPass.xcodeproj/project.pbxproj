@@ -1,0 +1,731 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD13823A284FC20500A24CF1 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD138239284FC20500A24CF1 /* Tests_iOS.swift */; };
+		CD13823C284FC20500A24CF1 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD13823B284FC20500A24CF1 /* Tests_iOSLaunchTests.swift */; };
+		CD138246284FC20500A24CF1 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD138245284FC20500A24CF1 /* Tests_macOS.swift */; };
+		CD138248284FC20500A24CF1 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD138247284FC20500A24CF1 /* Tests_macOSLaunchTests.swift */; };
+		CD138249284FC20500A24CF1 /* cryptoPass.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CD13821E284FC20500A24CF1 /* cryptoPass.xcdatamodeld */; };
+		CD13824A284FC20500A24CF1 /* cryptoPass.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CD13821E284FC20500A24CF1 /* cryptoPass.xcdatamodeld */; };
+		CD13824B284FC20500A24CF1 /* cryptoPassApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD138220284FC20500A24CF1 /* cryptoPassApp.swift */; };
+		CD13824C284FC20500A24CF1 /* cryptoPassApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD138220284FC20500A24CF1 /* cryptoPassApp.swift */; };
+		CD13824D284FC20500A24CF1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD138221284FC20500A24CF1 /* ContentView.swift */; };
+		CD13824E284FC20500A24CF1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD138221284FC20500A24CF1 /* ContentView.swift */; };
+		CD13824F284FC20500A24CF1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD138222284FC20500A24CF1 /* Persistence.swift */; };
+		CD138250284FC20500A24CF1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD138222284FC20500A24CF1 /* Persistence.swift */; };
+		CD138251284FC20500A24CF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD138223284FC20500A24CF1 /* Assets.xcassets */; };
+		CD138252284FC20500A24CF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD138223284FC20500A24CF1 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD138236284FC20500A24CF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD138219284FC20400A24CF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD138227284FC20500A24CF1;
+			remoteInfo = "cryptoPass (iOS)";
+		};
+		CD138242284FC20500A24CF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD138219284FC20400A24CF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD13822D284FC20500A24CF1;
+			remoteInfo = "cryptoPass (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CD13821F284FC20500A24CF1 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
+		CD138220284FC20500A24CF1 /* cryptoPassApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cryptoPassApp.swift; sourceTree = "<group>"; };
+		CD138221284FC20500A24CF1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CD138222284FC20500A24CF1 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		CD138223284FC20500A24CF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD138228284FC20500A24CF1 /* cryptoPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cryptoPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD13822E284FC20500A24CF1 /* cryptoPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cryptoPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD138230284FC20500A24CF1 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		CD138235284FC20500A24CF1 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD138239284FC20500A24CF1 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
+		CD13823B284FC20500A24CF1 /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOSLaunchTests.swift; sourceTree = "<group>"; };
+		CD138241284FC20500A24CF1 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD138245284FC20500A24CF1 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		CD138247284FC20500A24CF1 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD138225284FC20500A24CF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD13822B284FC20500A24CF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD138232284FC20500A24CF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD13823E284FC20500A24CF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD138218284FC20400A24CF1 = {
+			isa = PBXGroup;
+			children = (
+				CD13821D284FC20500A24CF1 /* Shared */,
+				CD13822F284FC20500A24CF1 /* macOS */,
+				CD138238284FC20500A24CF1 /* Tests iOS */,
+				CD138244284FC20500A24CF1 /* Tests macOS */,
+				CD138229284FC20500A24CF1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD13821D284FC20500A24CF1 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				CD138220284FC20500A24CF1 /* cryptoPassApp.swift */,
+				CD138221284FC20500A24CF1 /* ContentView.swift */,
+				CD138222284FC20500A24CF1 /* Persistence.swift */,
+				CD138223284FC20500A24CF1 /* Assets.xcassets */,
+				CD13821E284FC20500A24CF1 /* cryptoPass.xcdatamodeld */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		CD138229284FC20500A24CF1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD138228284FC20500A24CF1 /* cryptoPass.app */,
+				CD13822E284FC20500A24CF1 /* cryptoPass.app */,
+				CD138235284FC20500A24CF1 /* Tests iOS.xctest */,
+				CD138241284FC20500A24CF1 /* Tests macOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD13822F284FC20500A24CF1 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				CD138230284FC20500A24CF1 /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		CD138238284FC20500A24CF1 /* Tests iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CD138239284FC20500A24CF1 /* Tests_iOS.swift */,
+				CD13823B284FC20500A24CF1 /* Tests_iOSLaunchTests.swift */,
+			);
+			path = "Tests iOS";
+			sourceTree = "<group>";
+		};
+		CD138244284FC20500A24CF1 /* Tests macOS */ = {
+			isa = PBXGroup;
+			children = (
+				CD138245284FC20500A24CF1 /* Tests_macOS.swift */,
+				CD138247284FC20500A24CF1 /* Tests_macOSLaunchTests.swift */,
+			);
+			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD138227284FC20500A24CF1 /* cryptoPass (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD138255284FC20500A24CF1 /* Build configuration list for PBXNativeTarget "cryptoPass (iOS)" */;
+			buildPhases = (
+				CD138224284FC20500A24CF1 /* Sources */,
+				CD138225284FC20500A24CF1 /* Frameworks */,
+				CD138226284FC20500A24CF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "cryptoPass (iOS)";
+			productName = "cryptoPass (iOS)";
+			productReference = CD138228284FC20500A24CF1 /* cryptoPass.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CD13822D284FC20500A24CF1 /* cryptoPass (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD138258284FC20500A24CF1 /* Build configuration list for PBXNativeTarget "cryptoPass (macOS)" */;
+			buildPhases = (
+				CD13822A284FC20500A24CF1 /* Sources */,
+				CD13822B284FC20500A24CF1 /* Frameworks */,
+				CD13822C284FC20500A24CF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "cryptoPass (macOS)";
+			productName = "cryptoPass (macOS)";
+			productReference = CD13822E284FC20500A24CF1 /* cryptoPass.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CD138234284FC20500A24CF1 /* Tests iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD13825B284FC20500A24CF1 /* Build configuration list for PBXNativeTarget "Tests iOS" */;
+			buildPhases = (
+				CD138231284FC20500A24CF1 /* Sources */,
+				CD138232284FC20500A24CF1 /* Frameworks */,
+				CD138233284FC20500A24CF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD138237284FC20500A24CF1 /* PBXTargetDependency */,
+			);
+			name = "Tests iOS";
+			productName = "Tests iOS";
+			productReference = CD138235284FC20500A24CF1 /* Tests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		CD138240284FC20500A24CF1 /* Tests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD13825E284FC20500A24CF1 /* Build configuration list for PBXNativeTarget "Tests macOS" */;
+			buildPhases = (
+				CD13823D284FC20500A24CF1 /* Sources */,
+				CD13823E284FC20500A24CF1 /* Frameworks */,
+				CD13823F284FC20500A24CF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD138243284FC20500A24CF1 /* PBXTargetDependency */,
+			);
+			name = "Tests macOS";
+			productName = "Tests macOS";
+			productReference = CD138241284FC20500A24CF1 /* Tests macOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD138219284FC20400A24CF1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					CD138227284FC20500A24CF1 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					CD13822D284FC20500A24CF1 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					CD138234284FC20500A24CF1 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = CD138227284FC20500A24CF1;
+					};
+					CD138240284FC20500A24CF1 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = CD13822D284FC20500A24CF1;
+					};
+				};
+			};
+			buildConfigurationList = CD13821C284FC20400A24CF1 /* Build configuration list for PBXProject "cryptoPass" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD138218284FC20400A24CF1;
+			productRefGroup = CD138229284FC20500A24CF1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD138227284FC20500A24CF1 /* cryptoPass (iOS) */,
+				CD13822D284FC20500A24CF1 /* cryptoPass (macOS) */,
+				CD138234284FC20500A24CF1 /* Tests iOS */,
+				CD138240284FC20500A24CF1 /* Tests macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD138226284FC20500A24CF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD138251284FC20500A24CF1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD13822C284FC20500A24CF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD138252284FC20500A24CF1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD138233284FC20500A24CF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD13823F284FC20500A24CF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD138224284FC20500A24CF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD138249284FC20500A24CF1 /* cryptoPass.xcdatamodeld in Sources */,
+				CD13824F284FC20500A24CF1 /* Persistence.swift in Sources */,
+				CD13824B284FC20500A24CF1 /* cryptoPassApp.swift in Sources */,
+				CD13824D284FC20500A24CF1 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD13822A284FC20500A24CF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD13824A284FC20500A24CF1 /* cryptoPass.xcdatamodeld in Sources */,
+				CD138250284FC20500A24CF1 /* Persistence.swift in Sources */,
+				CD13824C284FC20500A24CF1 /* cryptoPassApp.swift in Sources */,
+				CD13824E284FC20500A24CF1 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD138231284FC20500A24CF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD13823C284FC20500A24CF1 /* Tests_iOSLaunchTests.swift in Sources */,
+				CD13823A284FC20500A24CF1 /* Tests_iOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD13823D284FC20500A24CF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD138248284FC20500A24CF1 /* Tests_macOSLaunchTests.swift in Sources */,
+				CD138246284FC20500A24CF1 /* Tests_macOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD138237284FC20500A24CF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD138227284FC20500A24CF1 /* cryptoPass (iOS) */;
+			targetProxy = CD138236284FC20500A24CF1 /* PBXContainerItemProxy */;
+		};
+		CD138243284FC20500A24CF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD13822D284FC20500A24CF1 /* cryptoPass (macOS) */;
+			targetProxy = CD138242284FC20500A24CF1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CD138253284FC20500A24CF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CD138254284FC20500A24CF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		CD138256284FC20500A24CF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P9KK452K8P;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sirilee.cryptoPass;
+				PRODUCT_NAME = cryptoPass;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CD138257284FC20500A24CF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P9KK452K8P;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sirilee.cryptoPass;
+				PRODUCT_NAME = cryptoPass;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD138259284FC20500A24CF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P9KK452K8P;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sirilee.cryptoPass;
+				PRODUCT_NAME = cryptoPass;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CD13825A284FC20500A24CF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P9KK452K8P;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sirilee.cryptoPass;
+				PRODUCT_NAME = cryptoPass;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		CD13825C284FC20500A24CF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P9KK452K8P;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sirilee.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "cryptoPass (iOS)";
+			};
+			name = Debug;
+		};
+		CD13825D284FC20500A24CF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P9KK452K8P;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sirilee.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "cryptoPass (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD13825F284FC20500A24CF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P9KK452K8P;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sirilee.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "cryptoPass (macOS)";
+			};
+			name = Debug;
+		};
+		CD138260284FC20500A24CF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P9KK452K8P;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sirilee.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "cryptoPass (macOS)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD13821C284FC20400A24CF1 /* Build configuration list for PBXProject "cryptoPass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD138253284FC20500A24CF1 /* Debug */,
+				CD138254284FC20500A24CF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD138255284FC20500A24CF1 /* Build configuration list for PBXNativeTarget "cryptoPass (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD138256284FC20500A24CF1 /* Debug */,
+				CD138257284FC20500A24CF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD138258284FC20500A24CF1 /* Build configuration list for PBXNativeTarget "cryptoPass (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD138259284FC20500A24CF1 /* Debug */,
+				CD13825A284FC20500A24CF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD13825B284FC20500A24CF1 /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD13825C284FC20500A24CF1 /* Debug */,
+				CD13825D284FC20500A24CF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD13825E284FC20500A24CF1 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD13825F284FC20500A24CF1 /* Debug */,
+				CD138260284FC20500A24CF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CD13821E284FC20500A24CF1 /* cryptoPass.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CD13821F284FC20500A24CF1 /* Shared.xcdatamodel */,
+			);
+			currentVersion = CD13821F284FC20500A24CF1 /* Shared.xcdatamodel */;
+			path = cryptoPass.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CD138219284FC20400A24CF1 /* Project object */;
+}
