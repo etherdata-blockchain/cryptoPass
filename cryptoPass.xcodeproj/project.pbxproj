@@ -15,12 +15,44 @@
 		CD13824A284FC20500A24CF1 /* cryptoPass.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CD13821E284FC20500A24CF1 /* cryptoPass.xcdatamodeld */; };
 		CD13824B284FC20500A24CF1 /* cryptoPassApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD138220284FC20500A24CF1 /* cryptoPassApp.swift */; };
 		CD13824C284FC20500A24CF1 /* cryptoPassApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD138220284FC20500A24CF1 /* cryptoPassApp.swift */; };
-		CD13824D284FC20500A24CF1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD138221284FC20500A24CF1 /* ContentView.swift */; };
-		CD13824E284FC20500A24CF1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD138221284FC20500A24CF1 /* ContentView.swift */; };
+		CD13824D284FC20500A24CF1 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD138221284FC20500A24CF1 /* HomePage.swift */; };
+		CD13824E284FC20500A24CF1 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD138221284FC20500A24CF1 /* HomePage.swift */; };
 		CD13824F284FC20500A24CF1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD138222284FC20500A24CF1 /* Persistence.swift */; };
 		CD138250284FC20500A24CF1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD138222284FC20500A24CF1 /* Persistence.swift */; };
 		CD138251284FC20500A24CF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD138223284FC20500A24CF1 /* Assets.xcassets */; };
 		CD138252284FC20500A24CF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD138223284FC20500A24CF1 /* Assets.xcassets */; };
+		CDB44DB9284FC32600DDBE87 /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = CDB44DB8284FC32600DDBE87 /* SFSafeSymbols */; };
+		CDB44DBC284FC34500DDBE87 /* InfoMationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DBB284FC34500DDBE87 /* InfoMationDetailView.swift */; };
+		CDB44DBD284FC34500DDBE87 /* InfoMationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DBB284FC34500DDBE87 /* InfoMationDetailView.swift */; };
+		CDB44DBF284FC43E00DDBE87 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DBE284FC43E00DDBE87 /* TitleView.swift */; };
+		CDB44DC0284FC43E00DDBE87 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DBE284FC43E00DDBE87 /* TitleView.swift */; };
+		CDB44DC3284FC55800DDBE87 /* Introduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DC2284FC55800DDBE87 /* Introduction.swift */; };
+		CDB44DC4284FC55800DDBE87 /* Introduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DC2284FC55800DDBE87 /* Introduction.swift */; };
+		CDB44DC7284FCBAF00DDBE87 /* FilledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DC6284FCBAF00DDBE87 /* FilledButton.swift */; };
+		CDB44DC8284FCBAF00DDBE87 /* FilledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DC6284FCBAF00DDBE87 /* FilledButton.swift */; };
+		CDB44DCA284FCCDE00DDBE87 /* IntroductionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DC9284FCCDE00DDBE87 /* IntroductionPage.swift */; };
+		CDB44DCB284FCCDE00DDBE87 /* IntroductionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DC9284FCCDE00DDBE87 /* IntroductionPage.swift */; };
+		CDB44DCD284FCDD800DDBE87 /* PrivateKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DCC284FCDD800DDBE87 /* PrivateKeyView.swift */; };
+		CDB44DCE284FCDD800DDBE87 /* PrivateKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DCC284FCDD800DDBE87 /* PrivateKeyView.swift */; };
+		CDB44DD1284FD3F600DDBE87 /* web3.swift in Frameworks */ = {isa = PBXBuildFile; productRef = CDB44DD0284FD3F600DDBE87 /* web3.swift */; };
+		CDB44DD32850482900DDBE87 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DD22850482900DDBE87 /* UserAccount.swift */; };
+		CDB44DD42850482900DDBE87 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DD22850482900DDBE87 /* UserAccount.swift */; };
+		CDB44DD728504CD600DDBE87 /* UserAccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DD628504CD600DDBE87 /* UserAccountModel.swift */; };
+		CDB44DD828504CD600DDBE87 /* UserAccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DD628504CD600DDBE87 /* UserAccountModel.swift */; };
+		CDB44DDB28504F7B00DDBE87 /* PasswordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DDA28504F7B00DDBE87 /* PasswordList.swift */; };
+		CDB44DDC28504F7B00DDBE87 /* PasswordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DDA28504F7B00DDBE87 /* PasswordList.swift */; };
+		CDB44DDE2850807900DDBE87 /* Environments.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DDD2850807900DDBE87 /* Environments.swift */; };
+		CDB44DDF2850807900DDBE87 /* Environments.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DDD2850807900DDBE87 /* Environments.swift */; };
+		CDB44DE1285086CC00DDBE87 /* InfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DE0285086CC00DDBE87 /* InfoCard.swift */; };
+		CDB44DE2285086CC00DDBE87 /* InfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DE0285086CC00DDBE87 /* InfoCard.swift */; };
+		CDB44DE428508C3B00DDBE87 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DE328508C3B00DDBE87 /* Config.swift */; };
+		CDB44DE528508C3B00DDBE87 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DE328508C3B00DDBE87 /* Config.swift */; };
+		CDB44DEA28508EDC00DDBE87 /* cryptoPassContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DE928508EDC00DDBE87 /* cryptoPassContract.swift */; };
+		CDB44DEB28508EDC00DDBE87 /* cryptoPassContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DE928508EDC00DDBE87 /* cryptoPassContract.swift */; };
+		CDB44DEE2850A11B00DDBE87 /* BigInt+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DED2850A11B00DDBE87 /* BigInt+extension.swift */; };
+		CDB44DEF2850A11B00DDBE87 /* BigInt+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DED2850A11B00DDBE87 /* BigInt+extension.swift */; };
+		CDB44DF22850A83B00DDBE87 /* web3.swift in Frameworks */ = {isa = PBXBuildFile; productRef = CDB44DF12850A83B00DDBE87 /* web3.swift */; };
+		CDB44DF42850A84A00DDBE87 /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = CDB44DF32850A84A00DDBE87 /* SFSafeSymbols */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +75,7 @@
 /* Begin PBXFileReference section */
 		CD13821F284FC20500A24CF1 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		CD138220284FC20500A24CF1 /* cryptoPassApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cryptoPassApp.swift; sourceTree = "<group>"; };
-		CD138221284FC20500A24CF1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CD138221284FC20500A24CF1 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		CD138222284FC20500A24CF1 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		CD138223284FC20500A24CF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD138228284FC20500A24CF1 /* cryptoPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cryptoPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +87,20 @@
 		CD138241284FC20500A24CF1 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD138245284FC20500A24CF1 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		CD138247284FC20500A24CF1 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		CDB44DBB284FC34500DDBE87 /* InfoMationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoMationDetailView.swift; sourceTree = "<group>"; };
+		CDB44DBE284FC43E00DDBE87 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		CDB44DC2284FC55800DDBE87 /* Introduction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Introduction.swift; sourceTree = "<group>"; };
+		CDB44DC6284FCBAF00DDBE87 /* FilledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilledButton.swift; sourceTree = "<group>"; };
+		CDB44DC9284FCCDE00DDBE87 /* IntroductionPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionPage.swift; sourceTree = "<group>"; };
+		CDB44DCC284FCDD800DDBE87 /* PrivateKeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateKeyView.swift; sourceTree = "<group>"; };
+		CDB44DD22850482900DDBE87 /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
+		CDB44DD628504CD600DDBE87 /* UserAccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountModel.swift; sourceTree = "<group>"; };
+		CDB44DDA28504F7B00DDBE87 /* PasswordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordList.swift; sourceTree = "<group>"; };
+		CDB44DDD2850807900DDBE87 /* Environments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environments.swift; sourceTree = "<group>"; };
+		CDB44DE0285086CC00DDBE87 /* InfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCard.swift; sourceTree = "<group>"; };
+		CDB44DE328508C3B00DDBE87 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		CDB44DE928508EDC00DDBE87 /* cryptoPassContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cryptoPassContract.swift; sourceTree = "<group>"; };
+		CDB44DED2850A11B00DDBE87 /* BigInt+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BigInt+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +108,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDB44DD1284FD3F600DDBE87 /* web3.swift in Frameworks */,
+				CDB44DB9284FC32600DDBE87 /* SFSafeSymbols in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +117,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDB44DF42850A84A00DDBE87 /* SFSafeSymbols in Frameworks */,
+				CDB44DF22850A83B00DDBE87 /* web3.swift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,14 +147,19 @@
 				CD138238284FC20500A24CF1 /* Tests iOS */,
 				CD138244284FC20500A24CF1 /* Tests macOS */,
 				CD138229284FC20500A24CF1 /* Products */,
+				CDB44DF02850A83B00DDBE87 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		CD13821D284FC20500A24CF1 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				CDB44DEC2850A0F600DDBE87 /* extensions */,
+				CDB44DD528504CC600DDBE87 /* models */,
+				CDB44DC1284FC54A00DDBE87 /* pages */,
+				CDB44DBA284FC32C00DDBE87 /* common */,
 				CD138220284FC20500A24CF1 /* cryptoPassApp.swift */,
-				CD138221284FC20500A24CF1 /* ContentView.swift */,
+				CD138221284FC20500A24CF1 /* HomePage.swift */,
 				CD138222284FC20500A24CF1 /* Persistence.swift */,
 				CD138223284FC20500A24CF1 /* Assets.xcassets */,
 				CD13821E284FC20500A24CF1 /* cryptoPass.xcdatamodeld */,
@@ -149,6 +204,95 @@
 			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
+		CDB44DBA284FC32C00DDBE87 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				CDB44DE828508EB800DDBE87 /* objects */,
+				CDB44DE728508EAC00DDBE87 /* settings */,
+				CDB44DE628508E8400DDBE87 /* components */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		CDB44DC1284FC54A00DDBE87 /* pages */ = {
+			isa = PBXGroup;
+			children = (
+				CDB44DD928504F5C00DDBE87 /* password */,
+				CDB44DC5284FCA6300DDBE87 /* introduction */,
+			);
+			path = pages;
+			sourceTree = "<group>";
+		};
+		CDB44DC5284FCA6300DDBE87 /* introduction */ = {
+			isa = PBXGroup;
+			children = (
+				CDB44DC2284FC55800DDBE87 /* Introduction.swift */,
+				CDB44DC9284FCCDE00DDBE87 /* IntroductionPage.swift */,
+				CDB44DCC284FCDD800DDBE87 /* PrivateKeyView.swift */,
+				CDB44DD22850482900DDBE87 /* UserAccount.swift */,
+			);
+			path = introduction;
+			sourceTree = "<group>";
+		};
+		CDB44DD528504CC600DDBE87 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				CDB44DD628504CD600DDBE87 /* UserAccountModel.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		CDB44DD928504F5C00DDBE87 /* password */ = {
+			isa = PBXGroup;
+			children = (
+				CDB44DDA28504F7B00DDBE87 /* PasswordList.swift */,
+			);
+			path = password;
+			sourceTree = "<group>";
+		};
+		CDB44DE628508E8400DDBE87 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				CDB44DBB284FC34500DDBE87 /* InfoMationDetailView.swift */,
+				CDB44DBE284FC43E00DDBE87 /* TitleView.swift */,
+				CDB44DC6284FCBAF00DDBE87 /* FilledButton.swift */,
+				CDB44DE0285086CC00DDBE87 /* InfoCard.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		CDB44DE728508EAC00DDBE87 /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				CDB44DDD2850807900DDBE87 /* Environments.swift */,
+				CDB44DE328508C3B00DDBE87 /* Config.swift */,
+			);
+			path = settings;
+			sourceTree = "<group>";
+		};
+		CDB44DE828508EB800DDBE87 /* objects */ = {
+			isa = PBXGroup;
+			children = (
+				CDB44DE928508EDC00DDBE87 /* cryptoPassContract.swift */,
+			);
+			path = objects;
+			sourceTree = "<group>";
+		};
+		CDB44DEC2850A0F600DDBE87 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CDB44DED2850A11B00DDBE87 /* BigInt+extension.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		CDB44DF02850A83B00DDBE87 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -165,6 +309,10 @@
 			dependencies = (
 			);
 			name = "cryptoPass (iOS)";
+			packageProductDependencies = (
+				CDB44DB8284FC32600DDBE87 /* SFSafeSymbols */,
+				CDB44DD0284FD3F600DDBE87 /* web3.swift */,
+			);
 			productName = "cryptoPass (iOS)";
 			productReference = CD138228284FC20500A24CF1 /* cryptoPass.app */;
 			productType = "com.apple.product-type.application";
@@ -182,6 +330,10 @@
 			dependencies = (
 			);
 			name = "cryptoPass (macOS)";
+			packageProductDependencies = (
+				CDB44DF12850A83B00DDBE87 /* web3.swift */,
+				CDB44DF32850A84A00DDBE87 /* SFSafeSymbols */,
+			);
 			productName = "cryptoPass (macOS)";
 			productReference = CD13822E284FC20500A24CF1 /* cryptoPass.app */;
 			productType = "com.apple.product-type.application";
@@ -257,6 +409,10 @@
 				Base,
 			);
 			mainGroup = CD138218284FC20400A24CF1;
+			packageReferences = (
+				CDB44DB7284FC32600DDBE87 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */,
+				CDB44DCF284FD3F600DDBE87 /* XCRemoteSwiftPackageReference "web3" */,
+			);
 			productRefGroup = CD138229284FC20500A24CF1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -307,10 +463,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDB44DCA284FCCDE00DDBE87 /* IntroductionPage.swift in Sources */,
 				CD138249284FC20500A24CF1 /* cryptoPass.xcdatamodeld in Sources */,
+				CDB44DC7284FCBAF00DDBE87 /* FilledButton.swift in Sources */,
 				CD13824F284FC20500A24CF1 /* Persistence.swift in Sources */,
+				CDB44DE1285086CC00DDBE87 /* InfoCard.swift in Sources */,
+				CDB44DD32850482900DDBE87 /* UserAccount.swift in Sources */,
+				CDB44DDE2850807900DDBE87 /* Environments.swift in Sources */,
+				CDB44DDB28504F7B00DDBE87 /* PasswordList.swift in Sources */,
+				CDB44DBC284FC34500DDBE87 /* InfoMationDetailView.swift in Sources */,
+				CDB44DEA28508EDC00DDBE87 /* cryptoPassContract.swift in Sources */,
+				CDB44DEE2850A11B00DDBE87 /* BigInt+extension.swift in Sources */,
+				CDB44DD728504CD600DDBE87 /* UserAccountModel.swift in Sources */,
 				CD13824B284FC20500A24CF1 /* cryptoPassApp.swift in Sources */,
-				CD13824D284FC20500A24CF1 /* ContentView.swift in Sources */,
+				CD13824D284FC20500A24CF1 /* HomePage.swift in Sources */,
+				CDB44DC3284FC55800DDBE87 /* Introduction.swift in Sources */,
+				CDB44DE428508C3B00DDBE87 /* Config.swift in Sources */,
+				CDB44DCD284FCDD800DDBE87 /* PrivateKeyView.swift in Sources */,
+				CDB44DBF284FC43E00DDBE87 /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,10 +488,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDB44DCB284FCCDE00DDBE87 /* IntroductionPage.swift in Sources */,
 				CD13824A284FC20500A24CF1 /* cryptoPass.xcdatamodeld in Sources */,
+				CDB44DC8284FCBAF00DDBE87 /* FilledButton.swift in Sources */,
 				CD138250284FC20500A24CF1 /* Persistence.swift in Sources */,
+				CDB44DE2285086CC00DDBE87 /* InfoCard.swift in Sources */,
+				CDB44DD42850482900DDBE87 /* UserAccount.swift in Sources */,
+				CDB44DDF2850807900DDBE87 /* Environments.swift in Sources */,
+				CDB44DDC28504F7B00DDBE87 /* PasswordList.swift in Sources */,
+				CDB44DBD284FC34500DDBE87 /* InfoMationDetailView.swift in Sources */,
+				CDB44DEB28508EDC00DDBE87 /* cryptoPassContract.swift in Sources */,
+				CDB44DEF2850A11B00DDBE87 /* BigInt+extension.swift in Sources */,
+				CDB44DD828504CD600DDBE87 /* UserAccountModel.swift in Sources */,
 				CD13824C284FC20500A24CF1 /* cryptoPassApp.swift in Sources */,
-				CD13824E284FC20500A24CF1 /* ContentView.swift in Sources */,
+				CD13824E284FC20500A24CF1 /* HomePage.swift in Sources */,
+				CDB44DC4284FC55800DDBE87 /* Introduction.swift in Sources */,
+				CDB44DE528508C3B00DDBE87 /* Config.swift in Sources */,
+				CDB44DCE284FCDD800DDBE87 /* PrivateKeyView.swift in Sources */,
+				CDB44DC0284FC43E00DDBE87 /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,6 +897,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CDB44DB7284FC32600DDBE87 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SFSafeSymbols/SFSafeSymbols";
+			requirement = {
+				branch = stable;
+				kind = branch;
+			};
+		};
+		CDB44DCF284FD3F600DDBE87 /* XCRemoteSwiftPackageReference "web3" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/argentlabs/web3.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CDB44DB8284FC32600DDBE87 /* SFSafeSymbols */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDB44DB7284FC32600DDBE87 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;
+			productName = SFSafeSymbols;
+		};
+		CDB44DD0284FD3F600DDBE87 /* web3.swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDB44DCF284FD3F600DDBE87 /* XCRemoteSwiftPackageReference "web3" */;
+			productName = web3.swift;
+		};
+		CDB44DF12850A83B00DDBE87 /* web3.swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDB44DCF284FD3F600DDBE87 /* XCRemoteSwiftPackageReference "web3" */;
+			productName = web3.swift;
+		};
+		CDB44DF32850A84A00DDBE87 /* SFSafeSymbols */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDB44DB7284FC32600DDBE87 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;
+			productName = SFSafeSymbols;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		CD13821E284FC20500A24CF1 /* cryptoPass.xcdatamodeld */ = {

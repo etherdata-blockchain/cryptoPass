@@ -10,11 +10,14 @@ import SwiftUI
 @main
 struct cryptoPassApp: App {
     let persistenceController = PersistenceController.shared
+    
+    @StateObject var userAccountModel = UserAccountModel()
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomePage()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(userAccountModel)
         }
     }
 }
