@@ -17,27 +17,6 @@ struct HomePage: View {
         NavigationView {
             if let _ = userAccountModel.userAccount{
                 PasswordList()
-                    .toolbar{
-                        #if os(iOS)
-                        ToolbarItem(placement: .navigationBarLeading){
-                            Button(action: { userAccountModel.resetAccount() }){
-                                Image(systemSymbol: .externaldriveFill)
-                            }
-                        }
-                        ToolbarItem(placement: .navigationBarTrailing){
-                            Button(action: {}){
-                                Image(systemSymbol: .plus)
-                            }
-                        }
-                        #elseif os(macOS)
-                        Button(action: { userAccountModel.resetAccount() }){
-                            Image(systemSymbol: .externaldriveFill)
-                        }
-                        Button(action: {}){
-                            Image(systemSymbol: .plus)
-                        }
-                        #endif
-                    }
             }
             Text("CryptoPass")
         }
