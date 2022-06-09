@@ -30,6 +30,12 @@ class UserAccountModel: ObservableObject{
         }
     }
     
+    func importAccount(privateKey: String, password: String) throws{
+        let keyStoreage = EthereumKeyLocalStorage()
+        //TODO: Replace 123
+        userAccount = try EthereumAccount.importAccount(keyStorage: keyStoreage, privateKey: privateKey, keystorePassword: "123")
+    }
+    
     func resetAccount(){
         userAccount = nil
         hasInitAccount = false

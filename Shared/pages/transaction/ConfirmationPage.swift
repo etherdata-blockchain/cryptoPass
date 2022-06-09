@@ -21,13 +21,20 @@ struct ConfirmationPage: View {
     @State private var gasPrice: BigUInt?
     @State private var gasFee: BigUInt?
     @State private var nonce: Int?
-    @State private var error: TransacionError?
+    @State private var err: TransacionError?
     @State private var showError = false
+    @State private var selection: Int?
+    @State private var chainId: Int?
     
     
     var body: some View {
         NavigationView {
             VStack{
+                if let transactionId = transactionModel.transactionId{
+                    NavigationLink(destination: TransactionDetail(transactionHash: transactionId, fromConfirmation: true), tag: 1, selection: $selection){
+                        
+                    }
+                }
                 if let transaction = transaction {
                     Form{
                         Section("Transaction Summary") {
@@ -42,7 +49,7 @@ struct ConfirmationPage: View {
                             
                             FormTextField(leading: {Text("Gas Price")}){
                                 LoadingView(isLoading: gasPrice == nil) {
-                                    Text("\(gasPrice!.toETD()) ETD")
+                                    Text("\(gasPrice!.toString()) gwei")
                                 }
                             }
                             
@@ -50,6 +57,19 @@ struct ConfirmationPage: View {
                                 LoadingView(isLoading: nonce == nil) {
                                     Text("\(nonce!)")
                                 }
+                            }
+                            
+                            
+                            FormTextField(leading: {Text("ChainID")}){
+                                LoadingView(isLoading: chainId == nil) {
+                                    Text("\(chainId!)")
+                                }
+                            }
+                        }
+                        
+                        Section("Status"){
+                            FormTextField(leading: { Text("Transaction Status") }){
+                                Text(transactionModel.transactionStatus.rawValue)
                             }
                         }
                     }
@@ -66,14 +86,14 @@ struct ConfirmationPage: View {
                     }
                     Spacer()
                     FilledButton(color: .indigo, title: "Close", isLoading: nil) {
-                        self.transactionModel.close()
+                        self.transactionModel.closeConfirmation()
                     }
                 }
             }
             .navigationTitle(Text("Confirmation"))
             .toolbar{
                 Button {
-                    transactionModel.close()
+                    transactionModel.closeConfirmation()
                 } label: {
                     Text("Close")
                 }
@@ -81,9 +101,9 @@ struct ConfirmationPage: View {
             }
             .interactiveDismissDisabled(true)
             .task {
-                await fetchGasFee()
+                await fetchChainData()
             }
-            .alert(isPresented: $showError, error: error) {
+            .alert(isPresented: $showError, error: err) {
                 Button(action: {showError = false}) {
                     Text("Close")
                 }
@@ -98,9 +118,13 @@ struct ConfirmationPage: View {
                 if authenticated{
                     /// make a transaction
                     Task{
-                        let transactionID = try await ethereumModel.ethereumClient.eth_sendRawTransaction(self.transactionModel.transaction!, withAccount: userAccountModel.userAccount!)
-                        print("Transaction ID: \(transactionID)")
-                        self.transactionModel.close()
+                        do{
+                            try await transactionModel.sendTransaction(with: ethereumModel.ethereumClient, account: userAccountModel.userAccount!)
+                            selection = 1
+                        } catch let error as TransacionError {
+                            self.err = error
+                            self.showError = true
+                        }
                     }
                     
                     
@@ -109,9 +133,9 @@ struct ConfirmationPage: View {
                 if !authenticated{
                     if hasError{
                         showError = true
-                        error = TransacionError.invalidDevice
+                        err = TransacionError.invalidDevice
                     } else {
-                        error = TransacionError.authenticationError
+                        err = TransacionError.authenticationError
                     }
                 }
             }
@@ -119,7 +143,7 @@ struct ConfirmationPage: View {
     }
     
     
-    private func fetchGasFee() async {
+    private func fetchChainData() async {
         withAnimation{
             Task {
                 if let transaction =  transactionModel.transaction{
@@ -127,6 +151,9 @@ struct ConfirmationPage: View {
                         gasFee = try await ethereumModel.ethereumClient.eth_estimateGas(transaction, withAccount: userAccountModel.userAccount!)
                         gasPrice = try await ethereumModel.ethereumClient.eth_gasPrice()
                         nonce = try await ethereumModel.ethereumClient.eth_getTransactionCount(address: userAccountModel.userAccount!.address, block: .Latest)
+                        chainId = try await ethereumModel.ethereumClient.chainId()
+                        
+                        transactionModel.updateTransaction(chainId: chainId!, gasPrice: gasPrice!, gasLimit: 2100000, nonce: nonce!)
                     } catch{
                         
                     }

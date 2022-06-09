@@ -53,10 +53,10 @@ struct PasswordForm: View {
         switch (selection){
         case PasswordType.website:
             websitePassword.copyFrom(password: basePassword)
-            submitData = try? JSONEncoder().encode(paymentCardPassword)
+            submitData = try? JSONEncoder().encode(websitePassword)
         case PasswordType.bank:
             bankPassword.copyFrom(password: basePassword)
-            submitData = try? JSONEncoder().encode(paymentCardPassword)
+            submitData = try? JSONEncoder().encode(bankPassword)
         case PasswordType.paymentCard:
             paymentCardPassword.copyFrom(password: basePassword)
             submitData = try? JSONEncoder().encode(paymentCardPassword)
@@ -64,9 +64,9 @@ struct PasswordForm: View {
         if let submitData = submitData {
             do{
                 if let transaction = try cryptoPassModel.client?.prepareAddSecret(secret: submitData) {
-                    transactionModel.show(transaction: transaction)
+                    transactionModel.showConfirmation(transaction: transaction)
                 }
-                
+
             } catch{
                 print("Error: \(error.localizedDescription)")
             }

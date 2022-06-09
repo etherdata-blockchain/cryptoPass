@@ -9,4 +9,5 @@ import Foundation
 
 struct Config{
     static let autoRefreshInterval: Double = 10
+    static let autoTransactionRefreshInterval: Double = 2
 }

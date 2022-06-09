@@ -31,7 +31,6 @@ struct HomePage: View {
         .sheet(isPresented: $userAccountModel.shouldInitAccount){
            IntroductionPage()
         }
-        
     }
 }
 
