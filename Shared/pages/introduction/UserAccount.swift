@@ -22,7 +22,7 @@ struct UserAccount: View {
             TitleView(color: .green, icon: .checkmarkCircle, title: "Wallet Address: \(account.address.value)", subtitle: "You are all set!")
             Spacer()
             FilledButton(color: color, title: "Done", isLoading: nil){
-                userAccountModel.setUpAccount(account, privateKey: privateKey)
+                userAccountModel.finishSetup()
             }
         }
         .padding()

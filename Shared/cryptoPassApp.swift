@@ -17,6 +17,7 @@ struct cryptoPassApp: App {
     @StateObject var authenticationModel = AuthenticationModel()
     @StateObject var ethereumModel = EthereumModel()
     @StateObject var passwordFormModel = PasswordFormModel()
+    @StateObject var passwordListModel = PasswordListModel()
 
     var body: some Scene {
         WindowGroup {
@@ -28,6 +29,7 @@ struct cryptoPassApp: App {
                 .environmentObject(authenticationModel)
                 .environmentObject(ethereumModel)
                 .environmentObject(passwordFormModel)
+                .environmentObject(passwordListModel)
         }
     }
 }
