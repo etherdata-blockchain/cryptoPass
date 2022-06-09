@@ -12,6 +12,7 @@ class CryptoPassModel : ObservableObject{
     @Published var client: CryptoPass?
     
     func setUp(client: EthereumClient, account: EthereumAccount, privateKey: Data){
+        print("Setting up account: \(privateKey.web3.hexString)")
         self.client = CryptoPass(client: client, account: account, privateKey: privateKey)
     }
 }

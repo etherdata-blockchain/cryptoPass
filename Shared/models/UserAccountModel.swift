@@ -34,6 +34,7 @@ class UserAccountModel: ObservableObject{
         let keyStoreage = EthereumKeyLocalStorage()
         //TODO: Replace 123
         userAccount = try EthereumAccount.importAccount(keyStorage: keyStoreage, privateKey: privateKey, keystorePassword: "123")
+        self.privateKey = privateKey.web3.hexData
     }
     
     func resetAccount(){
@@ -42,9 +43,7 @@ class UserAccountModel: ObservableObject{
         shouldInitAccount = true
     }
     
-    func setUpAccount(_ account: EthereumAccount, privateKey: Data){
-        self.privateKey = privateKey
-        userAccount = account
+    func finishSetup(){
         hasInitAccount = true
         shouldInitAccount = false
     }
