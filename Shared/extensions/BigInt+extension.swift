@@ -13,3 +13,13 @@ extension BigInt{
         Double(self) / pow(10, 18)
     }
 }
+
+extension BigUInt{
+    func toETD() -> Double{
+        Double(self) / pow(10, 18)
+    }
+    
+    func toString() -> String{
+       String( Double(self))
+    }
+}

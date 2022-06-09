@@ -15,7 +15,7 @@ struct PrivateKeyView: View {
     @State private var privateKey = ""
     @State private var secret = ""
     @State private var isLoading = false
-    @State private var error: String?
+    @State private var error: PrivateKeyError?
     @State private var hasError = false
     @State private var userAccount: EthereumAccount?
     @State private var selection: Int?
@@ -23,7 +23,7 @@ struct PrivateKeyView: View {
     var body: some View {
         VStack{
             if let userAccount = userAccount {
-                NavigationLink(destination: UserAccount(account: userAccount), tag: 1, selection: $selection){
+                NavigationLink(destination: UserAccount(account: userAccount, privateKey: privateKey.data(using: .utf8)!), tag: 1, selection: $selection){
                     
                 }
             }
@@ -54,8 +54,10 @@ struct PrivateKeyView: View {
         #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
         #endif
-        .alert(isPresented: $hasError){
-            Alert(title: Text("Error"), message: Text(error!), dismissButton: .default(Text("ok")))
+        .alert(isPresented: $hasError, error: error) {
+            Button(action: { hasError = false}) {
+                Text("Close")
+            }
         }
         
     }
@@ -63,7 +65,7 @@ struct PrivateKeyView: View {
     private func verify(){
         if (secret.count == 0 || privateKey.count == 0){
             hasError = true
-            self.error = "Private key and secret should not be empty"
+            error = .emptyPrivateKey
             return
         }
         
@@ -75,7 +77,7 @@ struct PrivateKeyView: View {
             selection = 1
         } catch {
             hasError = true
-            self.error = error.localizedDescription
+            self.error = .invalidPrivateKey
         }
     
         isLoading = false

@@ -10,6 +10,9 @@ import CoreData
 
 struct HomePage: View {
     @EnvironmentObject var userAccountModel: UserAccountModel
+    @EnvironmentObject var cryptoPassModel: CryptoPassModel
+    @EnvironmentObject var ethereumModel: EthereumModel
+ 
     @Environment(\.managedObjectContext) private var viewContext
     
     
@@ -17,31 +20,14 @@ struct HomePage: View {
         NavigationView {
             if let _ = userAccountModel.userAccount{
                 PasswordList()
-                    .toolbar{
-                        #if os(iOS)
-                        ToolbarItem(placement: .navigationBarLeading){
-                            Button(action: { userAccountModel.resetAccount() }){
-                                Image(systemSymbol: .externaldriveFill)
-                            }
-                        }
-                        ToolbarItem(placement: .navigationBarTrailing){
-                            Button(action: {}){
-                                Image(systemSymbol: .plus)
-                            }
-                        }
-                        #elseif os(macOS)
-                        Button(action: { userAccountModel.resetAccount() }){
-                            Image(systemSymbol: .externaldriveFill)
-                        }
-                        Button(action: {}){
-                            Image(systemSymbol: .plus)
-                        }
-                        #endif
-                    }
             }
             Text("CryptoPass")
         }
-
+        .onReceive(userAccountModel.$userAccount, perform: { account in
+            if let account = account{
+                cryptoPassModel.setUp(client: ethereumModel.ethereumClient, account: account, privateKey: userAccountModel.privateKey!)
+            }
+        })
         .sheet(isPresented: $userAccountModel.shouldInitAccount){
            IntroductionPage()
         }

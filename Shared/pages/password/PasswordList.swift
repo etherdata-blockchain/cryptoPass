@@ -11,12 +11,15 @@ import BigInt
 
 struct PasswordList: View {
     @EnvironmentObject var userAccountModel: UserAccountModel
+    @EnvironmentObject var cryptoPassModel: CryptoPassModel
+    @EnvironmentObject var ethereumModel: EthereumModel
     
     @State private var isLoading = false
     @State private var blockNumber: Int?
     @State private var accountBalance: BigInt?
     @State private var hasError = false
     @State private var error: String?
+    @State private var selection: Int?
     
     let timer = Timer.publish(every: Config.autoRefreshInterval, on: .main, in: .common).autoconnect()
     
@@ -25,6 +28,9 @@ struct PasswordList: View {
             if (isLoading){
                 ProgressView()
             } else {
+                NavigationLink(destination:  PasswordForm(), tag: 1, selection: $selection){
+                    
+                }
                 List{
                     Section(header: Text("Blockchain info")) {
                         InfoCard(title: "BlockNumber", subtitle: "\(blockNumber ?? 0)", color: .orange, unit: "blocks", icon: .boltBatteryblock)
@@ -32,10 +38,25 @@ struct PasswordList: View {
                         InfoCard(title: "Balance", subtitle: "\((accountBalance ?? 0).toETD())", color: .orange, unit: "ETD", icon: .boltBatteryblock)
                     }
                     
+                    
                     Section(header: Text("Passwords")) {
+                        
                         
                     }
                     
+                }
+                .listStyle(InsetGroupedListStyle())
+                .toolbar{
+                    ToolbarItem(placement: .navigationBarLeading){
+                        Button(action: { userAccountModel.resetAccount() }){
+                            Image(systemSymbol: .externaldriveFill)
+                        }
+                    }
+                    ToolbarItem(placement: .navigationBarTrailing){
+                        Button(action: { selection = 1 }){
+                            Image(systemSymbol: .plus)
+                        }
+                    }
                 }
             }
             
@@ -68,11 +89,10 @@ struct PasswordList: View {
                     if !isRefresh {
                         isLoading = true
                     }
-                    print("Address: \(userAccountModel.userAccount!.address)")
-                    blockNumber = try await userAccountModel.ethereumClient.eth_blockNumber()
-                    accountBalance = BigInt(try await userAccountModel.ethereumClient.eth_getBalance(address: userAccountModel.userAccount!.address, block: EthereumBlock.Latest))
+                    blockNumber = try await ethereumModel.ethereumClient.eth_blockNumber()
+                    accountBalance = BigInt(try await ethereumModel.ethereumClient.eth_getBalance(address: userAccountModel.userAccount!.address, block: EthereumBlock.Latest))
                     
-                    if let cryptoPass = userAccountModel.cryptoPass{
+                    if let cryptoPass = cryptoPassModel.client{
                         let secretSize = try await cryptoPass.getSecretSize()
                         if secretSize > 0{
                             let secrets = try await cryptoPass.getSecretsInRange(start: 0, end: secretSize)
