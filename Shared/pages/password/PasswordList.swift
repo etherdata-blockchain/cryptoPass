@@ -21,9 +21,8 @@ struct PasswordList: View {
     @State private var hasError = false
     @State private var error: String?
     @State private var selection: Int?
+    @State private var passwordSize: BigUInt?
     @State private var passwords: [CommonPassword] = []
-    
-    let timer = Timer.publish(every: Config.autoRefreshInterval, on: .main, in: .common).autoconnect()
     
     var body: some View {
         Group{
@@ -34,13 +33,17 @@ struct PasswordList: View {
                 Section(header: Text("Blockchain info")) {
                     InfoCard(title: "BlockNumber", subtitle: "\(blockNumber ?? 0)", color: .orange, unit: "blocks", icon: .boltBatteryblock)
                     
-                    InfoCard(title: "Balance", subtitle: "\((accountBalance ?? 0).toETD())", color: .orange, unit: "ETD", icon: .boltBatteryblock)
+                    InfoCard(title: "Balance", subtitle: "\((accountBalance ?? 0).toETD().toSwiftUIString())", color: .orange, unit: "ETD", icon: .boltBatteryblock)
+                    
+                    InfoCard(title: "Password Count", subtitle: "\(passwordSize ?? 0)", color: .orange, unit: "", icon: .boltBatteryblock)
                 }
                 
                 
                 Section(header: Text("Passwords")) {
                     ForEach(passwords){ password in
-                        PasswordRow(password: password)
+                        NavigationLink(destination: PasswordForm(editMode: false, password: password)) {
+                            PasswordRow(password: password)
+                        }
                     }
                     .onDelete{
                         indexSet in
@@ -71,12 +74,6 @@ struct PasswordList: View {
         .navigationTitle(Text("Password"))
         .refreshable {
             await fetchBlockchainData(isRefresh: true)
-        }
-        .onReceive(timer){
-            timer in
-            Task {
-//                await fetchBlockchainData()
-            }
         }
         .onReceive(userAccountModel.$userAccount){ _ in
             Task {
@@ -124,9 +121,9 @@ struct PasswordList: View {
                     accountBalance = BigInt(try await ethereumModel.ethereumClient.eth_getBalance(address: userAccountModel.userAccount!.address, block: EthereumBlock.Latest))
                     
                     if let cryptoPass = cryptoPassModel.client{
-                        let passwordSize = try await cryptoPass.getSecretSize()
-                        if passwordSize > 0{
-                            passwords = try await cryptoPass.getSecretsInRange(start: 0, end: passwordSize).map{
+                        passwordSize = try await cryptoPass.getSecretSize()
+                        if passwordSize! > 0{
+                            passwords = try await cryptoPass.getSecretsInRange(start: 0, end: passwordSize!).map{
                                 password in
                                 CommonPassword.from(password: password)!
                             }

@@ -11,17 +11,29 @@ import web3
 struct PasswordForm: View {
     @EnvironmentObject var cryptoPassModel: CryptoPassModel
     @EnvironmentObject var transactionModel: TransactionModel
+    @EnvironmentObject var passwordFormModel: PasswordFormModel
     
-    @State private var selection = PasswordType.website
-    @State private var basePassword: BasePassword = BasePassword(name: "", description: "", password: "", type: PasswordType.website)
-    @State private var bankPassword: BankPassword = BankPassword(name: "", description: "", userName: "", password: "", securityQuestions: [], secondaryPassword: "")
-    @State private var websitePassword: WebsitePassword = WebsitePassword(name: "", description: "", userName: "", password: "")
-    @State private var paymentCardPassword: PaymentCardPassword = PaymentCardPassword(name: "", description: "", password: "", cardNumber: "", securityCode: "")
+    var editMode = true
+    private let password: CommonPassword?
+    
+    init(editMode: Bool=true){
+        self.editMode = editMode
+        self.password = nil
+    }
+    
+    /**
+     Initialize with stored password
+     */
+    init(editMode: Bool=true, password: CommonPassword){
+        self.editMode = editMode
+        self.password = password
+    }
+    
     
     var body: some View {
         Form{
             Section(header: Text("Form type")){
-                Picker("Password Type", selection: $selection) {
+                Picker("Password Type", selection: $passwordFormModel.selection) {
                     ForEach(PasswordType.allCases, id: \.rawValue){
                         type in
                         Text(type.rawValue).tag(type)
@@ -30,37 +42,38 @@ struct PasswordForm: View {
             }
             
             Section(header: Text("Basic Info")) {
-                TextField("Name", text: $basePassword.name)
-                TextEditorWithPlaceholder(label: "Description", text: $basePassword.description)
+                TextField("Name", text: $passwordFormModel.basePassword.name)
+                TextEditorWithPlaceholder(label: "Description", text: $passwordFormModel.basePassword.description)
                     .frame(height: 150)
                 
             }
             renderFormViewByType()
         }
+        .onAppear{
+            if let password = password {
+                passwordFormModel.initialize(with: password)
+            }
+        }
+        .onDisappear{
+            passwordFormModel.clear()
+        }
+        .disabled(!editMode)
         .sheet(isPresented: $transactionModel.showConfirmationDialog){
             ConfirmationPage()
         }
-        .navigationTitle(Text("Create a new password"))
+        .navigationTitle(Text(editMode ? "Create a new password" : "Password"))
         .toolbar{
-            Button(action: { submit() }) {
-                Text("Submit")
+            if editMode {
+                Button(action: { submit() }) {
+                    Text("Submit")
+                }
             }
         }
     }
     
+
     private func submit(){
-        var submitData: Data?
-        switch (selection){
-        case PasswordType.website:
-            websitePassword.copyFrom(password: basePassword)
-            submitData = try? JSONEncoder().encode(websitePassword)
-        case PasswordType.bank:
-            bankPassword.copyFrom(password: basePassword)
-            submitData = try? JSONEncoder().encode(bankPassword)
-        case PasswordType.paymentCard:
-            paymentCardPassword.copyFrom(password: basePassword)
-            submitData = try? JSONEncoder().encode(paymentCardPassword)
-        }
+        let submitData = passwordFormModel.prepareSubmissionData()
         if let submitData = submitData {
             do{
                 if let transaction = try cryptoPassModel.client?.prepareAddSecret(secret: submitData) {
@@ -74,13 +87,13 @@ struct PasswordForm: View {
     }
     
     private func renderFormViewByType() -> AnyView{
-        switch (selection){
+        switch (passwordFormModel.selection){
         case PasswordType.bank:
-            return AnyView(BankFormView(password: $bankPassword))
+            return AnyView(BankFormView(password: $passwordFormModel.bankPassword))
         case PasswordType.website:
-            return AnyView(WebsiteFormView(password: $websitePassword))
+            return AnyView(WebsiteFormView(password: $passwordFormModel.websitePassword))
         case PasswordType.paymentCard:
-            return AnyView(PaymentCardFormView(password: $paymentCardPassword))
+            return AnyView(PaymentCardFormView(password: $passwordFormModel.paymentCardPassword))
         }
     }
 }
