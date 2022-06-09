@@ -23,3 +23,9 @@ extension BigUInt{
        String( Double(self))
     }
 }
+
+extension Double{
+    func toSwiftUIString() -> String{
+        String(format: "%.2f", self)
+    }
+}

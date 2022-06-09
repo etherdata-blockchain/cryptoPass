@@ -53,6 +53,7 @@ struct WebsitePassword: Password{
         self.name = password.name
         self.description = password.description
     }
+    
     var name: String
     
     var description: String

@@ -78,25 +78,9 @@
             filePath = "Shared/common/objects/CommonPassword.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "from(password:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "294D3786-7129-4140-AD9C-9883329F1C5D"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Shared/pages/password/PasswordForm.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "submit()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -110,8 +94,8 @@
             filePath = "Shared/pages/password/PasswordList.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "delete(at:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -129,6 +113,22 @@
             startingLineNumber = "74"
             endingLineNumber = "74"
             landmarkName = "verify()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DEA6BD22-3D29-436C-B0BD-178CE83EB800"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Shared/common/objects/CommonPassword.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "from(password:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
