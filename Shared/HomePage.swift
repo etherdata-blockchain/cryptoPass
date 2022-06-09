@@ -10,6 +10,9 @@ import CoreData
 
 struct HomePage: View {
     @EnvironmentObject var userAccountModel: UserAccountModel
+    @EnvironmentObject var cryptoPassModel: CryptoPassModel
+    @EnvironmentObject var ethereumModel: EthereumModel
+ 
     @Environment(\.managedObjectContext) private var viewContext
     
     
@@ -20,7 +23,11 @@ struct HomePage: View {
             }
             Text("CryptoPass")
         }
-
+        .onReceive(userAccountModel.$userAccount, perform: { account in
+            if let account = account{
+                cryptoPassModel.setUp(client: ethereumModel.ethereumClient, account: account, privateKey: userAccountModel.privateKey!)
+            }
+        })
         .sheet(isPresented: $userAccountModel.shouldInitAccount){
            IntroductionPage()
         }

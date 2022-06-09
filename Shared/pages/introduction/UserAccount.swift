@@ -11,8 +11,10 @@ import web3
 
 struct UserAccount: View {
     @EnvironmentObject var userAccountModel: UserAccountModel
+    @EnvironmentObject var cryptoPassModel: CryptoPassModel
     
     let account: EthereumAccount
+    let privateKey: Data
     var color = Color.indigo
     
     var body: some View {
@@ -20,7 +22,7 @@ struct UserAccount: View {
             TitleView(color: .green, icon: .checkmarkCircle, title: "Wallet Address: \(account.address.value)", subtitle: "You are all set!")
             Spacer()
             FilledButton(color: color, title: "Done", isLoading: nil){
-                userAccountModel.setUpAccount(account)
+                userAccountModel.setUpAccount(account, privateKey: privateKey)
             }
         }
         .padding()
@@ -30,7 +32,7 @@ struct UserAccount: View {
 
 struct UserAccountView_Previews: PreviewProvider {
     static var previews: some View {
-        UserAccount(account: try! EthereumAccount(keyStorage: EthereumKeyLocalStorage(), keystorePassword: "124"))
+        UserAccount(account: try! EthereumAccount(keyStorage: EthereumKeyLocalStorage(), keystorePassword: "124"), privateKey: "abcde".data(using: .utf8)!)
             .environmentObject(UserAccountModel())
     }
 }

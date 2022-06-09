@@ -12,12 +12,20 @@ struct cryptoPassApp: App {
     let persistenceController = PersistenceController.shared
     
     @StateObject var userAccountModel = UserAccountModel()
+    @StateObject var cryptoPassModel = CryptoPassModel()
+    @StateObject var transactionModel = TransactionModel()
+    @StateObject var authenticationModel = AuthenticationModel()
+    @StateObject var ethereumModel = EthereumModel()
 
     var body: some Scene {
         WindowGroup {
             HomePage()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .environmentObject(userAccountModel)
+                .environmentObject(cryptoPassModel)
+                .environmentObject(transactionModel)
+                .environmentObject(authenticationModel)
+                .environmentObject(ethereumModel)
         }
     }
 }

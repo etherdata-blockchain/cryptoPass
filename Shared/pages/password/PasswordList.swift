@@ -11,6 +11,8 @@ import BigInt
 
 struct PasswordList: View {
     @EnvironmentObject var userAccountModel: UserAccountModel
+    @EnvironmentObject var cryptoPassModel: CryptoPassModel
+    @EnvironmentObject var ethereumModel: EthereumModel
     
     @State private var isLoading = false
     @State private var blockNumber: Int?
@@ -87,11 +89,10 @@ struct PasswordList: View {
                     if !isRefresh {
                         isLoading = true
                     }
-                    print("Address: \(userAccountModel.userAccount!.address)")
-                    blockNumber = try await userAccountModel.ethereumClient.eth_blockNumber()
-                    accountBalance = BigInt(try await userAccountModel.ethereumClient.eth_getBalance(address: userAccountModel.userAccount!.address, block: EthereumBlock.Latest))
+                    blockNumber = try await ethereumModel.ethereumClient.eth_blockNumber()
+                    accountBalance = BigInt(try await ethereumModel.ethereumClient.eth_getBalance(address: userAccountModel.userAccount!.address, block: EthereumBlock.Latest))
                     
-                    if let cryptoPass = userAccountModel.cryptoPass{
+                    if let cryptoPass = cryptoPassModel.client{
                         let secretSize = try await cryptoPass.getSecretSize()
                         if secretSize > 0{
                             let secrets = try await cryptoPass.getSecretsInRange(start: 0, end: secretSize)

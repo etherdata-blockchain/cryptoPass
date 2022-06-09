@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import web3
 
 struct PasswordForm: View {
+    @EnvironmentObject var cryptoPassModel: CryptoPassModel
+    @EnvironmentObject var transactionModel: TransactionModel
+    
     @State private var selection = PasswordType.website
     @State private var basePassword: BasePassword = BasePassword(name: "", description: "", password: "", type: PasswordType.website)
     @State private var bankPassword: BankPassword = BankPassword(name: "", description: "", userName: "", password: "", securityQuestions: [], secondaryPassword: "")
@@ -33,6 +37,9 @@ struct PasswordForm: View {
             }
             renderFormViewByType()
         }
+        .sheet(isPresented: $transactionModel.showConfirmationDialog){
+            ConfirmationPage()
+        }
         .navigationTitle(Text("Create a new password"))
         .toolbar{
             Button(action: { submit() }) {
@@ -42,13 +49,27 @@ struct PasswordForm: View {
     }
     
     private func submit(){
+        var submitData: Data?
         switch (selection){
         case PasswordType.website:
             websitePassword.copyFrom(password: basePassword)
+            submitData = try? JSONEncoder().encode(paymentCardPassword)
         case PasswordType.bank:
             bankPassword.copyFrom(password: basePassword)
+            submitData = try? JSONEncoder().encode(paymentCardPassword)
         case PasswordType.paymentCard:
             paymentCardPassword.copyFrom(password: basePassword)
+            submitData = try? JSONEncoder().encode(paymentCardPassword)
+        }
+        if let submitData = submitData {
+            do{
+                if let transaction = try cryptoPassModel.client?.prepareAddSecret(secret: submitData) {
+                    transactionModel.show(transaction: transaction)
+                }
+                
+            } catch{
+                print("Error: \(error.localizedDescription)")
+            }
         }
     }
     

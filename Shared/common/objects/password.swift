@@ -28,7 +28,6 @@ protocol Password : Identifiable, Codable{
     var type: PasswordType {get}
     
     mutating func copyFrom(password: BasePassword)
-    
 }
 
 
