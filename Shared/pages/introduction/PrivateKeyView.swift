@@ -9,6 +9,7 @@ import SwiftUI
 import web3
 
 struct PrivateKeyView: View {
+    @EnvironmentObject var userAccountModel: UserAccountModel
     let color = Color.indigo
     
     
@@ -17,12 +18,11 @@ struct PrivateKeyView: View {
     @State private var isLoading = false
     @State private var error: PrivateKeyError?
     @State private var hasError = false
-    @State private var userAccount: EthereumAccount?
     @State private var selection: Int?
     
     var body: some View {
         VStack{
-            if let userAccount = userAccount {
+            if let userAccount = userAccountModel.userAccount {
                 NavigationLink(destination: UserAccount(account: userAccount, privateKey: privateKey.data(using: .utf8)!), tag: 1, selection: $selection){
                     
                 }
@@ -71,9 +71,7 @@ struct PrivateKeyView: View {
         
         isLoading = true
         do{
-            let keyStoreage = EthereumKeyLocalStorage()
-            //TODO: Replace 123
-            userAccount = try EthereumAccount.importAccount(keyStorage: keyStoreage, privateKey: privateKey, keystorePassword: "123")
+            try userAccountModel.importAccount(privateKey: privateKey, password: secret)
             selection = 1
         } catch {
             hasError = true

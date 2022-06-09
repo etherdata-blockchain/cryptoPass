@@ -48,11 +48,11 @@ private struct DeleteSecret: ABIFunction{
     
     static var name: String = "deleteFile"
     
-    public var index: BigInt
+    public var index: BigUInt
     
     public init(contract: EthereumAddress,
                 from: EthereumAddress? = nil,
-                index: BigInt) {
+                index: BigUInt) {
         self.contract = contract
         self.from = from
         self.index = index
@@ -78,12 +78,12 @@ private struct GetSecretInRange: ABIFunction{
     
     static var name: String = "getSecretInRange"
     
-    var start: BigInt
-    var end: BigInt
+    var start: BigUInt
+    var end: BigUInt
     
     public init(contract: EthereumAddress,
                 from: EthereumAddress? = nil,
-                start: BigInt, end: BigInt) {
+                start: BigUInt, end: BigUInt) {
         
         self.contract = contract
         self.from = from
@@ -114,15 +114,6 @@ private struct GetSecretSize: ABIFunction{
     }
 }
 
-struct GetSecretSizeResponse: ABIResponse {
-    public static var types: [ABIType.Type] = [ BigInt.self ]
-    public let value: BigInt
-    
-    public init?(values: [ABIDecoder.DecodedValue]) throws {
-        self.value = try values[0].decoded()
-    }
-}
-
 struct GetSecretsInRangeResponse: ABIResponse {
     public static var types: [ABIType.Type] = [ String.self ]
     public let value: [String]
@@ -132,11 +123,23 @@ struct GetSecretsInRangeResponse: ABIResponse {
     }
 }
 
+struct GetSecretSizeResponse: ABIResponse {
+    public static var types: [ABIType.Type] = [ BigUInt.self ]
+    public let value: BigUInt
+    
+    public init?(values: [ABIDecoder.DecodedValue]) throws {
+        self.value = try values[0].decoded()
+    }
+}
+
+
+
 struct CryptoPass{
     let contractAddress = EthereumAddress(Environments.contractAddress!)
     let client: EthereumClient
     let account: EthereumAccount
     let privateKey: Data
+    
     
     private func decode(message: String) -> Data?{
         if let combinedData = Data(base64Encoded: message){
@@ -162,49 +165,54 @@ struct CryptoPass{
         return nil
     }
 
-    /**
-     Add a new secret. Will return the transaction id
-     */
-    func addSecret(secret: Data) async throws -> String? {
-        if let transaction = try prepareAddSecret(secret: secret){
-            let transactionHash = try await client.eth_sendRawTransaction(transaction, withAccount: account)
-            return transactionHash
-        }
-        return nil
-    }
     
     /**
      Returns secret size
      */
-    func getSecretSize() async throws -> BigInt{
-        let function = GetSecretSize(contract: contractAddress)
-        let result = try await function.call(withClient: client, responseType: GetSecretSizeResponse.self)
-        return result.value
+    func getSecretSize() async throws -> BigUInt{
+        let function = GetSecretSize(contract: contractAddress, from: account.address)
+        let size = try await function.call(withClient: client, responseType: GetSecretSizeResponse.self).value
+        print("Size: \(size)")
+        return size
     }
     
     /**
      Get lis of secrets in range. Secret will be website, payment card or bank
      */
-    func getSecretsInRange(start: BigInt, end: BigInt) async throws -> [Any?]{
-        let function = GetSecretSize(contract: contractAddress)
-        let result = try await function.call(withClient: client, responseType: GetSecretsInRangeResponse.self)
-        let secrets: [Any?] = try result.value.map { message in
-            self.decode(message: message)
-        }.filter { data in
-            data != nil
-        }.map { data in
-            let basePassword = try? JSONDecoder().decode(BasePassword.self, from: data!)
-            switch (basePassword?.type){
-            case .website:
-                return try JSONDecoder().decode(WebsitePassword.self, from : data!)
-            case .paymentCard:
-                return try JSONDecoder().decode(PaymentCardPassword.self, from : data!)
-            case .bank:
-                return try JSONDecoder().decode(BankPassword.self, from : data!)
-            case .none:
-                return nil
+    func getSecretsInRange(start: BigUInt, end: BigUInt) async throws -> [Any]{
+        let function = GetSecretInRange(contract: contractAddress, from: account.address, start: start, end: end)
+        let transaction = try! function.transaction()
+        let result = try await client.eth_call(transaction)
+        let decodeData = try ABIDecoder.decodeData(result, types: [ABIArray<String>.self], asArray: true)
+        let secrets = try GetSecretsInRangeResponse(values: decodeData)?.value
+        if let secrets = secrets{
+            let decodedSecrets: [Data?] = secrets.map { message -> Data? in
+                self.decode(message: message)
             }
+            
+            let decodedFilteredSecrets: [Data] = decodedSecrets.compactMap{$0}
+            let decodedPasswords = try decodedFilteredSecrets.map { data -> Any? in
+                let basePassword = try? JSONDecoder().decode(BasePassword.self, from: data)
+                switch (basePassword?.type){
+                case .website:
+                    return try JSONDecoder().decode(WebsitePassword.self, from : data)
+                case .paymentCard:
+                    return try JSONDecoder().decode(PaymentCardPassword.self, from : data)
+                case .bank:
+                    return try JSONDecoder().decode(BankPassword.self, from : data)
+                case .none:
+                    return nil
+                }
+            }
+            return decodedPasswords.compactMap{$0}
         }
-        return secrets
+       
+        return []
+    }
+    
+    func prepareDeleteTransaction(at index: BigUInt) async throws -> EthereumTransaction{
+        let function = DeleteSecret(contract: contractAddress, index: index)
+        let transaction = try function.transaction()
+        return transaction
     }
 }

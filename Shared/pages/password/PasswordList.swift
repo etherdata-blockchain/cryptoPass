@@ -13,6 +13,7 @@ struct PasswordList: View {
     @EnvironmentObject var userAccountModel: UserAccountModel
     @EnvironmentObject var cryptoPassModel: CryptoPassModel
     @EnvironmentObject var ethereumModel: EthereumModel
+    @EnvironmentObject var transactionModel: TransactionModel
     
     @State private var isLoading = false
     @State private var blockNumber: Int?
@@ -20,45 +21,51 @@ struct PasswordList: View {
     @State private var hasError = false
     @State private var error: String?
     @State private var selection: Int?
+    @State private var passwords: [CommonPassword] = []
     
     let timer = Timer.publish(every: Config.autoRefreshInterval, on: .main, in: .common).autoconnect()
     
     var body: some View {
         Group{
-            if (isLoading){
-                ProgressView()
-            } else {
-                NavigationLink(destination:  PasswordForm(), tag: 1, selection: $selection){
+            NavigationLink(destination:  PasswordForm(), tag: 1, selection: $selection){
+                
+            }
+            List{
+                Section(header: Text("Blockchain info")) {
+                    InfoCard(title: "BlockNumber", subtitle: "\(blockNumber ?? 0)", color: .orange, unit: "blocks", icon: .boltBatteryblock)
                     
+                    InfoCard(title: "Balance", subtitle: "\((accountBalance ?? 0).toETD())", color: .orange, unit: "ETD", icon: .boltBatteryblock)
                 }
-                List{
-                    Section(header: Text("Blockchain info")) {
-                        InfoCard(title: "BlockNumber", subtitle: "\(blockNumber ?? 0)", color: .orange, unit: "blocks", icon: .boltBatteryblock)
-                        
-                        InfoCard(title: "Balance", subtitle: "\((accountBalance ?? 0).toETD())", color: .orange, unit: "ETD", icon: .boltBatteryblock)
+                
+                
+                Section(header: Text("Passwords")) {
+                    ForEach(passwords){ password in
+                        PasswordRow(password: password)
                     }
-                    
-                    
-                    Section(header: Text("Passwords")) {
-                        
-                        
-                    }
-                    
-                }
-                .listStyle(InsetGroupedListStyle())
-                .toolbar{
-                    ToolbarItem(placement: .navigationBarLeading){
-                        Button(action: { userAccountModel.resetAccount() }){
-                            Image(systemSymbol: .externaldriveFill)
+                    .onDelete{
+                        indexSet in
+                        Task{
+                            await delete(at: indexSet)
                         }
                     }
-                    ToolbarItem(placement: .navigationBarTrailing){
-                        Button(action: { selection = 1 }){
-                            Image(systemSymbol: .plus)
-                        }
+                    
+                }
+                
+            }
+            .listStyle(InsetGroupedListStyle())
+            .toolbar{
+                ToolbarItem(placement: .navigationBarLeading){
+                    Button(action: { userAccountModel.resetAccount() }){
+                        Image(systemSymbol: .externaldriveFill)
+                    }
+                }
+                ToolbarItem(placement: .navigationBarTrailing){
+                    Button(action: { selection = 1 }){
+                        Image(systemSymbol: .plus)
                     }
                 }
             }
+            
             
         }
         .navigationTitle(Text("Password"))
@@ -67,7 +74,18 @@ struct PasswordList: View {
         }
         .onReceive(timer){
             timer in
-            task {
+            Task {
+//                await fetchBlockchainData()
+            }
+        }
+        .onReceive(userAccountModel.$userAccount){ _ in
+            Task {
+                await fetchBlockchainData()
+            }
+        }
+        .onReceive(transactionModel.$transactionReceipt){
+            _ in
+            Task {
                 await fetchBlockchainData()
             }
         }
@@ -76,6 +94,19 @@ struct PasswordList: View {
         }
         .task {
             await fetchBlockchainData()
+        }
+        .sheet(isPresented: $transactionModel.showConfirmationDialog) {
+            ConfirmationPage()
+        }
+    }
+    
+    func delete(at offsets: IndexSet) async {
+        let index = offsets.first
+        if let cryptoPass = cryptoPassModel.client{
+            if let index = index {
+                let transaction = try! await cryptoPass.prepareDeleteTransaction(at: BigUInt(index))
+                transactionModel.showConfirmation(transaction: transaction)
+            }
         }
     }
     
@@ -93,10 +124,12 @@ struct PasswordList: View {
                     accountBalance = BigInt(try await ethereumModel.ethereumClient.eth_getBalance(address: userAccountModel.userAccount!.address, block: EthereumBlock.Latest))
                     
                     if let cryptoPass = cryptoPassModel.client{
-                        let secretSize = try await cryptoPass.getSecretSize()
-                        if secretSize > 0{
-                            let secrets = try await cryptoPass.getSecretsInRange(start: 0, end: secretSize)
-                            print(secrets)
+                        let passwordSize = try await cryptoPass.getSecretSize()
+                        if passwordSize > 0{
+                            passwords = try await cryptoPass.getSecretsInRange(start: 0, end: passwordSize).map{
+                                password in
+                                CommonPassword.from(password: password)!
+                            }
                         }
                     }
                     

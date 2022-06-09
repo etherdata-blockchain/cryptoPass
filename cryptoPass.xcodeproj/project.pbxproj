@@ -47,14 +47,14 @@
 		CDB44DE2285086CC00DDBE87 /* InfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DE0285086CC00DDBE87 /* InfoCard.swift */; };
 		CDB44DE428508C3B00DDBE87 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DE328508C3B00DDBE87 /* Config.swift */; };
 		CDB44DE528508C3B00DDBE87 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DE328508C3B00DDBE87 /* Config.swift */; };
-		CDB44DEA28508EDC00DDBE87 /* cryptoPassContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DE928508EDC00DDBE87 /* cryptoPassContract.swift */; };
-		CDB44DEB28508EDC00DDBE87 /* cryptoPassContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DE928508EDC00DDBE87 /* cryptoPassContract.swift */; };
+		CDB44DEA28508EDC00DDBE87 /* CryptoPassContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DE928508EDC00DDBE87 /* CryptoPassContract.swift */; };
+		CDB44DEB28508EDC00DDBE87 /* CryptoPassContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DE928508EDC00DDBE87 /* CryptoPassContract.swift */; };
 		CDB44DEE2850A11B00DDBE87 /* BigInt+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DED2850A11B00DDBE87 /* BigInt+extension.swift */; };
 		CDB44DEF2850A11B00DDBE87 /* BigInt+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DED2850A11B00DDBE87 /* BigInt+extension.swift */; };
 		CDB44DF22850A83B00DDBE87 /* web3.swift in Frameworks */ = {isa = PBXBuildFile; productRef = CDB44DF12850A83B00DDBE87 /* web3.swift */; };
 		CDB44DF42850A84A00DDBE87 /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = CDB44DF32850A84A00DDBE87 /* SFSafeSymbols */; };
-		CDB44DF62850AF6D00DDBE87 /* password.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DF52850AF6D00DDBE87 /* password.swift */; };
-		CDB44DF72850AF6D00DDBE87 /* password.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DF52850AF6D00DDBE87 /* password.swift */; };
+		CDB44DF62850AF6D00DDBE87 /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DF52850AF6D00DDBE87 /* Password.swift */; };
+		CDB44DF72850AF6D00DDBE87 /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DF52850AF6D00DDBE87 /* Password.swift */; };
 		CDB44DF92850B56700DDBE87 /* PasswordForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DF82850B56700DDBE87 /* PasswordForm.swift */; };
 		CDB44DFA2850B56700DDBE87 /* PasswordForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DF82850B56700DDBE87 /* PasswordForm.swift */; };
 		CDB44DFC2850B8A900DDBE87 /* TextEditorWithPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DFB2850B8A900DDBE87 /* TextEditorWithPlaceholder.swift */; };
@@ -67,9 +67,6 @@
 		CDB44E0C2850DE0B00DDBE87 /* PaymentCardFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E0A2850DE0B00DDBE87 /* PaymentCardFormView.swift */; };
 		CDB44E0E2850FD3400DDBE87 /* CryptoPassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E0D2850FD3400DDBE87 /* CryptoPassModel.swift */; };
 		CDB44E0F2850FD3400DDBE87 /* CryptoPassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E0D2850FD3400DDBE87 /* CryptoPassModel.swift */; };
-		CDB44E132851022100DDBE87 /* Crypto in Frameworks */ = {isa = PBXBuildFile; productRef = CDB44E122851022100DDBE87 /* Crypto */; };
-		CDB44E152851022100DDBE87 /* _CryptoExtras in Frameworks */ = {isa = PBXBuildFile; productRef = CDB44E142851022100DDBE87 /* _CryptoExtras */; };
-		CDB44E182851094800DDBE87 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CDB44E172851094800DDBE87 /* CryptoSwift */; };
 		CDB44E1A285199EF00DDBE87 /* Data+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E19285199EF00DDBE87 /* Data+extension.swift */; };
 		CDB44E1B285199EF00DDBE87 /* Data+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E19285199EF00DDBE87 /* Data+extension.swift */; };
 		CDB44E1D2851A4F600DDBE87 /* ConfirmationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E1C2851A4F600DDBE87 /* ConfirmationPage.swift */; };
@@ -88,6 +85,18 @@
 		CDB44E322851C8D400DDBE87 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E302851C8D400DDBE87 /* LoadingView.swift */; };
 		CDB44E342851CF9500DDBE87 /* EthereumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E332851CF9500DDBE87 /* EthereumModel.swift */; };
 		CDB44E352851CF9500DDBE87 /* EthereumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E332851CF9500DDBE87 /* EthereumModel.swift */; };
+		CDB44E382851D1BC00DDBE87 /* TransactionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E372851D1BC00DDBE87 /* TransactionDetail.swift */; };
+		CDB44E392851D1BC00DDBE87 /* TransactionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E372851D1BC00DDBE87 /* TransactionDetail.swift */; };
+		CDB44E3C2851D34C00DDBE87 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E3B2851D34C00DDBE87 /* Transaction.swift */; };
+		CDB44E3D2851D34C00DDBE87 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E3B2851D34C00DDBE87 /* Transaction.swift */; };
+		CDB44E3F2851E03400DDBE87 /* EthereumClient+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E3E2851E03400DDBE87 /* EthereumClient+extension.swift */; };
+		CDB44E402851E03400DDBE87 /* EthereumClient+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E3E2851E03400DDBE87 /* EthereumClient+extension.swift */; };
+		CDB44E422851EBB300DDBE87 /* TransactionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E412851EBB300DDBE87 /* TransactionDetailView.swift */; };
+		CDB44E432851EBB300DDBE87 /* TransactionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E412851EBB300DDBE87 /* TransactionDetailView.swift */; };
+		CDB44E462851EE6D00DDBE87 /* transaction_receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E452851EE6D00DDBE87 /* transaction_receipt.swift */; };
+		CDB44E4A2851F74300DDBE87 /* TransactionStatus+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E492851F74300DDBE87 /* TransactionStatus+extension.swift */; };
+		CDB44E502852407F00DDBE87 /* PasswordRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E4F2852407F00DDBE87 /* PasswordRow.swift */; };
+		CDB44E522852438A00DDBE87 /* CommonPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E512852438A00DDBE87 /* CommonPassword.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,9 +143,9 @@
 		CDB44DDD2850807900DDBE87 /* Environments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environments.swift; sourceTree = "<group>"; };
 		CDB44DE0285086CC00DDBE87 /* InfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCard.swift; sourceTree = "<group>"; };
 		CDB44DE328508C3B00DDBE87 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		CDB44DE928508EDC00DDBE87 /* cryptoPassContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cryptoPassContract.swift; sourceTree = "<group>"; };
+		CDB44DE928508EDC00DDBE87 /* CryptoPassContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoPassContract.swift; sourceTree = "<group>"; };
 		CDB44DED2850A11B00DDBE87 /* BigInt+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BigInt+extension.swift"; sourceTree = "<group>"; };
-		CDB44DF52850AF6D00DDBE87 /* password.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = password.swift; sourceTree = "<group>"; };
+		CDB44DF52850AF6D00DDBE87 /* Password.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password.swift; sourceTree = "<group>"; };
 		CDB44DF82850B56700DDBE87 /* PasswordForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordForm.swift; sourceTree = "<group>"; };
 		CDB44DFB2850B8A900DDBE87 /* TextEditorWithPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditorWithPlaceholder.swift; sourceTree = "<group>"; };
 		CDB44DFE2850C71D00DDBE87 /* BankFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankFormView.swift; sourceTree = "<group>"; };
@@ -152,6 +161,14 @@
 		CDB44E2C2851C4C600DDBE87 /* PrivateKeyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateKeyError.swift; sourceTree = "<group>"; };
 		CDB44E302851C8D400DDBE87 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		CDB44E332851CF9500DDBE87 /* EthereumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthereumModel.swift; sourceTree = "<group>"; };
+		CDB44E372851D1BC00DDBE87 /* TransactionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetail.swift; sourceTree = "<group>"; };
+		CDB44E3B2851D34C00DDBE87 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		CDB44E3E2851E03400DDBE87 /* EthereumClient+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EthereumClient+extension.swift"; sourceTree = "<group>"; };
+		CDB44E412851EBB300DDBE87 /* TransactionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailView.swift; sourceTree = "<group>"; };
+		CDB44E452851EE6D00DDBE87 /* transaction_receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transaction_receipt.swift; sourceTree = "<group>"; };
+		CDB44E492851F74300DDBE87 /* TransactionStatus+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransactionStatus+extension.swift"; sourceTree = "<group>"; };
+		CDB44E4F2852407F00DDBE87 /* PasswordRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordRow.swift; sourceTree = "<group>"; };
+		CDB44E512852438A00DDBE87 /* CommonPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonPassword.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,10 +176,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDB44E152851022100DDBE87 /* _CryptoExtras in Frameworks */,
-				CDB44E132851022100DDBE87 /* Crypto in Frameworks */,
 				CDB44DD1284FD3F600DDBE87 /* web3.swift in Frameworks */,
-				CDB44E182851094800DDBE87 /* CryptoSwift in Frameworks */,
 				CDB44DB9284FC32600DDBE87 /* SFSafeSymbols in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,6 +222,7 @@
 		CD13821D284FC20500A24CF1 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				CDB44E4B28521E6500DDBE87 /* contracts */,
 				CDB44DEC2850A0F600DDBE87 /* extensions */,
 				CDB44DD528504CC600DDBE87 /* models */,
 				CDB44DC1284FC54A00DDBE87 /* pages */,
@@ -261,6 +276,8 @@
 		CDB44DBA284FC32C00DDBE87 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				CDB44E442851EE5500DDBE87 /* mockdata */,
+				CDB44E3A2851D33D00DDBE87 /* enums */,
 				CDB44E282851BEED00DDBE87 /* errors */,
 				CDB44DE828508EB800DDBE87 /* objects */,
 				CDB44DE728508EAC00DDBE87 /* settings */,
@@ -272,6 +289,7 @@
 		CDB44DC1284FC54A00DDBE87 /* pages */ = {
 			isa = PBXGroup;
 			children = (
+				CDB44E362851D14400DDBE87 /* transaction */,
 				CDB44DD928504F5C00DDBE87 /* password */,
 				CDB44DC5284FCA6300DDBE87 /* introduction */,
 			);
@@ -309,7 +327,7 @@
 				CDB44DFE2850C71D00DDBE87 /* BankFormView.swift */,
 				CDB44E072850DD0400DDBE87 /* WebsiteFormView.swift */,
 				CDB44E0A2850DE0B00DDBE87 /* PaymentCardFormView.swift */,
-				CDB44E1C2851A4F600DDBE87 /* ConfirmationPage.swift */,
+				CDB44E4F2852407F00DDBE87 /* PasswordRow.swift */,
 			);
 			path = password;
 			sourceTree = "<group>";
@@ -340,8 +358,9 @@
 		CDB44DE828508EB800DDBE87 /* objects */ = {
 			isa = PBXGroup;
 			children = (
-				CDB44DE928508EDC00DDBE87 /* cryptoPassContract.swift */,
-				CDB44DF52850AF6D00DDBE87 /* password.swift */,
+				CDB44DE928508EDC00DDBE87 /* CryptoPassContract.swift */,
+				CDB44DF52850AF6D00DDBE87 /* Password.swift */,
+				CDB44E512852438A00DDBE87 /* CommonPassword.swift */,
 			);
 			path = objects;
 			sourceTree = "<group>";
@@ -351,6 +370,8 @@
 			children = (
 				CDB44DED2850A11B00DDBE87 /* BigInt+extension.swift */,
 				CDB44E19285199EF00DDBE87 /* Data+extension.swift */,
+				CDB44E3E2851E03400DDBE87 /* EthereumClient+extension.swift */,
+				CDB44E492851F74300DDBE87 /* TransactionStatus+extension.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -369,6 +390,39 @@
 				CDB44E2C2851C4C600DDBE87 /* PrivateKeyError.swift */,
 			);
 			path = errors;
+			sourceTree = "<group>";
+		};
+		CDB44E362851D14400DDBE87 /* transaction */ = {
+			isa = PBXGroup;
+			children = (
+				CDB44E1C2851A4F600DDBE87 /* ConfirmationPage.swift */,
+				CDB44E372851D1BC00DDBE87 /* TransactionDetail.swift */,
+				CDB44E412851EBB300DDBE87 /* TransactionDetailView.swift */,
+			);
+			path = transaction;
+			sourceTree = "<group>";
+		};
+		CDB44E3A2851D33D00DDBE87 /* enums */ = {
+			isa = PBXGroup;
+			children = (
+				CDB44E3B2851D34C00DDBE87 /* Transaction.swift */,
+			);
+			path = enums;
+			sourceTree = "<group>";
+		};
+		CDB44E442851EE5500DDBE87 /* mockdata */ = {
+			isa = PBXGroup;
+			children = (
+				CDB44E452851EE6D00DDBE87 /* transaction_receipt.swift */,
+			);
+			path = mockdata;
+			sourceTree = "<group>";
+		};
+		CDB44E4B28521E6500DDBE87 /* contracts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = contracts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,9 +444,6 @@
 			packageProductDependencies = (
 				CDB44DB8284FC32600DDBE87 /* SFSafeSymbols */,
 				CDB44DD0284FD3F600DDBE87 /* web3.swift */,
-				CDB44E122851022100DDBE87 /* Crypto */,
-				CDB44E142851022100DDBE87 /* _CryptoExtras */,
-				CDB44E172851094800DDBE87 /* CryptoSwift */,
 			);
 			productName = "cryptoPass (iOS)";
 			productReference = CD138228284FC20500A24CF1 /* cryptoPass.app */;
@@ -493,8 +544,6 @@
 			packageReferences = (
 				CDB44DB7284FC32600DDBE87 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */,
 				CDB44DCF284FD3F600DDBE87 /* XCRemoteSwiftPackageReference "web3" */,
-				CDB44E112851022100DDBE87 /* XCRemoteSwiftPackageReference "swift-crypto" */,
-				CDB44E162851094800DDBE87 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
 			);
 			productRefGroup = CD138229284FC20500A24CF1 /* Products */;
 			projectDirPath = "";
@@ -548,10 +597,14 @@
 			files = (
 				CDB44E342851CF9500DDBE87 /* EthereumModel.swift in Sources */,
 				CDB44E082850DD0400DDBE87 /* WebsiteFormView.swift in Sources */,
+				CDB44E4A2851F74300DDBE87 /* TransactionStatus+extension.swift in Sources */,
 				CDB44DCA284FCCDE00DDBE87 /* IntroductionPage.swift in Sources */,
 				CDB44E0E2850FD3400DDBE87 /* CryptoPassModel.swift in Sources */,
+				CDB44E3F2851E03400DDBE87 /* EthereumClient+extension.swift in Sources */,
 				CDB44E202851A8D800DDBE87 /* FormTextField.swift in Sources */,
 				CDB44E312851C8D400DDBE87 /* LoadingView.swift in Sources */,
+				CDB44E502852407F00DDBE87 /* PasswordRow.swift in Sources */,
+				CDB44E522852438A00DDBE87 /* CommonPassword.swift in Sources */,
 				CD138249284FC20500A24CF1 /* cryptoPass.xcdatamodeld in Sources */,
 				CDB44DC7284FCBAF00DDBE87 /* FilledButton.swift in Sources */,
 				CDB44DFC2850B8A900DDBE87 /* TextEditorWithPlaceholder.swift in Sources */,
@@ -559,23 +612,27 @@
 				CD13824F284FC20500A24CF1 /* Persistence.swift in Sources */,
 				CDB44DE1285086CC00DDBE87 /* InfoCard.swift in Sources */,
 				CDB44DD32850482900DDBE87 /* UserAccount.swift in Sources */,
-				CDB44DF62850AF6D00DDBE87 /* password.swift in Sources */,
+				CDB44DF62850AF6D00DDBE87 /* Password.swift in Sources */,
+				CDB44E382851D1BC00DDBE87 /* TransactionDetail.swift in Sources */,
 				CDB44DDE2850807900DDBE87 /* Environments.swift in Sources */,
 				CDB44E0B2850DE0B00DDBE87 /* PaymentCardFormView.swift in Sources */,
 				CDB44DDB28504F7B00DDBE87 /* PasswordList.swift in Sources */,
 				CDB44E2A2851BEF800DDBE87 /* TransactionError.swift in Sources */,
 				CDB44DBC284FC34500DDBE87 /* InfoMationDetailView.swift in Sources */,
-				CDB44DEA28508EDC00DDBE87 /* cryptoPassContract.swift in Sources */,
+				CDB44DEA28508EDC00DDBE87 /* CryptoPassContract.swift in Sources */,
 				CDB44DEE2850A11B00DDBE87 /* BigInt+extension.swift in Sources */,
 				CDB44DF92850B56700DDBE87 /* PasswordForm.swift in Sources */,
 				CDB44DD728504CD600DDBE87 /* UserAccountModel.swift in Sources */,
 				CD13824B284FC20500A24CF1 /* cryptoPassApp.swift in Sources */,
 				CDB44E262851B59100DDBE87 /* AuthenticationModel.swift in Sources */,
+				CDB44E3C2851D34C00DDBE87 /* Transaction.swift in Sources */,
 				CDB44E1D2851A4F600DDBE87 /* ConfirmationPage.swift in Sources */,
 				CD13824D284FC20500A24CF1 /* HomePage.swift in Sources */,
 				CDB44E232851B25400DDBE87 /* TransactionModel.swift in Sources */,
 				CDB44E1A285199EF00DDBE87 /* Data+extension.swift in Sources */,
+				CDB44E422851EBB300DDBE87 /* TransactionDetailView.swift in Sources */,
 				CDB44DC3284FC55800DDBE87 /* Introduction.swift in Sources */,
+				CDB44E462851EE6D00DDBE87 /* transaction_receipt.swift in Sources */,
 				CDB44DE428508C3B00DDBE87 /* Config.swift in Sources */,
 				CDB44DCD284FCDD800DDBE87 /* PrivateKeyView.swift in Sources */,
 				CDB44E2D2851C4C600DDBE87 /* PrivateKeyError.swift in Sources */,
@@ -591,6 +648,7 @@
 				CDB44E092850DD0400DDBE87 /* WebsiteFormView.swift in Sources */,
 				CDB44DCB284FCCDE00DDBE87 /* IntroductionPage.swift in Sources */,
 				CDB44E0F2850FD3400DDBE87 /* CryptoPassModel.swift in Sources */,
+				CDB44E402851E03400DDBE87 /* EthereumClient+extension.swift in Sources */,
 				CDB44E212851A8D800DDBE87 /* FormTextField.swift in Sources */,
 				CDB44E322851C8D400DDBE87 /* LoadingView.swift in Sources */,
 				CD13824A284FC20500A24CF1 /* cryptoPass.xcdatamodeld in Sources */,
@@ -600,22 +658,25 @@
 				CD138250284FC20500A24CF1 /* Persistence.swift in Sources */,
 				CDB44DE2285086CC00DDBE87 /* InfoCard.swift in Sources */,
 				CDB44DD42850482900DDBE87 /* UserAccount.swift in Sources */,
-				CDB44DF72850AF6D00DDBE87 /* password.swift in Sources */,
+				CDB44DF72850AF6D00DDBE87 /* Password.swift in Sources */,
+				CDB44E392851D1BC00DDBE87 /* TransactionDetail.swift in Sources */,
 				CDB44DDF2850807900DDBE87 /* Environments.swift in Sources */,
 				CDB44E0C2850DE0B00DDBE87 /* PaymentCardFormView.swift in Sources */,
 				CDB44DDC28504F7B00DDBE87 /* PasswordList.swift in Sources */,
 				CDB44E2B2851BEF800DDBE87 /* TransactionError.swift in Sources */,
 				CDB44DBD284FC34500DDBE87 /* InfoMationDetailView.swift in Sources */,
-				CDB44DEB28508EDC00DDBE87 /* cryptoPassContract.swift in Sources */,
+				CDB44DEB28508EDC00DDBE87 /* CryptoPassContract.swift in Sources */,
 				CDB44DEF2850A11B00DDBE87 /* BigInt+extension.swift in Sources */,
 				CDB44DFA2850B56700DDBE87 /* PasswordForm.swift in Sources */,
 				CDB44DD828504CD600DDBE87 /* UserAccountModel.swift in Sources */,
 				CD13824C284FC20500A24CF1 /* cryptoPassApp.swift in Sources */,
 				CDB44E272851B59100DDBE87 /* AuthenticationModel.swift in Sources */,
+				CDB44E3D2851D34C00DDBE87 /* Transaction.swift in Sources */,
 				CDB44E1E2851A4F600DDBE87 /* ConfirmationPage.swift in Sources */,
 				CD13824E284FC20500A24CF1 /* HomePage.swift in Sources */,
 				CDB44E242851B25400DDBE87 /* TransactionModel.swift in Sources */,
 				CDB44E1B285199EF00DDBE87 /* Data+extension.swift in Sources */,
+				CDB44E432851EBB300DDBE87 /* TransactionDetailView.swift in Sources */,
 				CDB44DC4284FC55800DDBE87 /* Introduction.swift in Sources */,
 				CDB44DE528508C3B00DDBE87 /* Config.swift in Sources */,
 				CDB44DCE284FCDD800DDBE87 /* PrivateKeyView.swift in Sources */,
@@ -1032,22 +1093,6 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		CDB44E112851022100DDBE87 /* XCRemoteSwiftPackageReference "swift-crypto" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apple/swift-crypto.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
-		CDB44E162851094800DDBE87 /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1070,21 +1115,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CDB44DB7284FC32600DDBE87 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;
 			productName = SFSafeSymbols;
-		};
-		CDB44E122851022100DDBE87 /* Crypto */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CDB44E112851022100DDBE87 /* XCRemoteSwiftPackageReference "swift-crypto" */;
-			productName = Crypto;
-		};
-		CDB44E142851022100DDBE87 /* _CryptoExtras */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CDB44E112851022100DDBE87 /* XCRemoteSwiftPackageReference "swift-crypto" */;
-			productName = _CryptoExtras;
-		};
-		CDB44E172851094800DDBE87 /* CryptoSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CDB44E162851094800DDBE87 /* XCRemoteSwiftPackageReference "CryptoSwift" */;
-			productName = CryptoSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 
