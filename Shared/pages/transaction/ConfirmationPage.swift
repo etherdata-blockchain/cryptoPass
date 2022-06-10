@@ -7,7 +7,6 @@
 
 import SwiftUI
 import web3
-import CryptoSwift
 import BigInt
 import LocalAuthentication
 
