@@ -50,12 +50,10 @@ struct PasswordForm: View {
             renderFormViewByType()
         }
         .onAppear{
+            passwordFormModel.clear()
             if let password = password {
                 passwordFormModel.initialize(with: password)
             }
-        }
-        .onDisappear{
-            passwordFormModel.clear()
         }
         .disabled(!editMode)
         .sheet(isPresented: $transactionModel.showConfirmationDialog){
