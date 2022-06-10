@@ -840,6 +840,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "cryptoPass--iOS--Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = CryptoPassPlus;
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to sign the transaction";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -852,7 +853,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.2.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sirilee.cryptoPass;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sirilee.cryptoPassPlus;
 				PRODUCT_NAME = cryptoPass;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = YES;
@@ -875,6 +876,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "cryptoPass--iOS--Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = CryptoPassPlus;
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to sign the transaction";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -887,7 +889,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.2.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sirilee.cryptoPass;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sirilee.cryptoPassPlus;
 				PRODUCT_NAME = cryptoPass;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = YES;
