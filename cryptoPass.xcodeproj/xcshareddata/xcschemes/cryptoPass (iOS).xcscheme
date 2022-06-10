@@ -38,6 +38,26 @@
                ReferencedContainer = "container:cryptoPass.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CDB44EC628532CFA00DDBE87"
+               BuildableName = "Tests Shared.xctest"
+               BlueprintName = "Tests Shared"
+               ReferencedContainer = "container:cryptoPass.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CDB44EB928532CDC00DDBE87"
+               BuildableName = "cryptoPassTests.xctest"
+               BlueprintName = "cryptoPassTests"
+               ReferencedContainer = "container:cryptoPass.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

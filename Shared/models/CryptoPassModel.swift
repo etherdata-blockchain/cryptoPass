@@ -8,6 +8,7 @@
 import Foundation
 import web3
 
+
 class CryptoPassModel : ObservableObject{
     @Published var client: CryptoPass?
     

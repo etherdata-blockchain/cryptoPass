@@ -14,7 +14,6 @@ struct PrivateKeyView: View {
     
     
     @State private var privateKey = ""
-    @State private var secret = ""
     @State private var isLoading = false
     @State private var error: PrivateKeyError?
     @State private var hasError = false
@@ -36,10 +35,6 @@ struct PrivateKeyView: View {
             
             Spacer()
             Form{
-                Section(header: Text("Keystore")){
-                    SecureField("Keystore Password", text: $secret)
-                }
-                
                 Section(header: Text("Private key")){
                     TextEditor(text: $privateKey)
                         .frame(height: 200)
@@ -63,7 +58,7 @@ struct PrivateKeyView: View {
     }
     
     private func verify(){
-        if (secret.count == 0 || privateKey.count == 0){
+        if (privateKey.count == 0){
             hasError = true
             error = .emptyPrivateKey
             return
@@ -71,7 +66,7 @@ struct PrivateKeyView: View {
         
         isLoading = true
         do{
-            try userAccountModel.importAccount(privateKey: privateKey, password: secret)
+            try userAccountModel.importAccount(privateKey: privateKey)
             selection = 1
         } catch {
             hasError = true

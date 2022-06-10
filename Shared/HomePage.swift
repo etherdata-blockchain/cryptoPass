@@ -21,7 +21,7 @@ struct HomePage: View {
             if let _ = userAccountModel.userAccount{
                 PasswordList()
             }
-            Text("CryptoPass")
+            TitleView(icon: .dotsAndLineVerticalAndCursorarrowRectangle, subtitle: "CryptoPass")
         }
         .onReceive(userAccountModel.$userAccount, perform: { account in
             if let account = account{
