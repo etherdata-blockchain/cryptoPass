@@ -17,12 +17,12 @@ struct PrivateKeyView: View {
     @State private var isLoading = false
     @State private var error: PrivateKeyError?
     @State private var hasError = false
-    @State private var selection: Int?
+    @State private var selection: Routes?
     
     var body: some View {
         VStack{
             if let userAccount = userAccountModel.userAccount {
-                NavigationLink(destination: UserAccount(account: userAccount, privateKey: privateKey.data(using: .utf8)!), tag: 1, selection: $selection){
+                NavigationLink(destination: UserAccount(account: userAccount, privateKey: privateKey.data(using: .utf8)!), tag: Routes.finishSettingUpPrivateKey, selection: $selection){
                     
                 }
             }
@@ -67,7 +67,7 @@ struct PrivateKeyView: View {
         isLoading = true
         do{
             try userAccountModel.importAccount(privateKey: privateKey)
-            selection = 1
+            selection = Routes.finishSettingUpPrivateKey
         } catch {
             hasError = true
             self.error = .invalidPrivateKey

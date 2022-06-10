@@ -10,7 +10,7 @@ import SwiftUI
 struct Introduction: View {
     let color = Color.indigo
     
-    @State var selection: Int? = nil
+    @State var selection: Routes? = nil
     
     var body: some View {
         VStack(alignment: .leading){
@@ -26,9 +26,9 @@ struct Introduction: View {
             
             InformationDetailView(title: "Fast", subTitle: "CryptoPass uses the ETD blockchain, high transaction speed and many nodes make your every use without waiting", imageName: .speedometer, color: color)
             Spacer(minLength: 40)
-            NavigationLink(destination: PrivateKeyView(), tag: 1, selection: $selection){
+            NavigationLink(destination: PrivateKeyView(), tag: Routes.setupPrivateKey, selection: $selection){
                 FilledButton(color: color, title: "Continue", isLoading: nil){
-                    selection = 1
+                    selection = Routes.setupPrivateKey
                 }
             }
         }
