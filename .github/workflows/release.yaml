@@ -19,4 +19,4 @@ jobs:
           build-number: ${{github.run_number}}
       - uses: EndBug/add-and-commit@v9
         with:
-          message: 'Release %{{ github.event.release.tag_name }}'
+          message: 'Release ${{ github.event.release.tag_name }}'
