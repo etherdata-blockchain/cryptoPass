@@ -17,6 +17,10 @@
 		CD138250284FC20500A24CF1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD138222284FC20500A24CF1 /* Persistence.swift */; };
 		CD138251284FC20500A24CF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD138223284FC20500A24CF1 /* Assets.xcassets */; };
 		CD138252284FC20500A24CF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD138223284FC20500A24CF1 /* Assets.xcassets */; };
+		CDAF099F28536C9B003AD86B /* LoginRequiredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAF099E28536C9B003AD86B /* LoginRequiredView.swift */; };
+		CDAF09A028536C9B003AD86B /* LoginRequiredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAF099E28536C9B003AD86B /* LoginRequiredView.swift */; };
+		CDAF09A228536CC0003AD86B /* LoginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAF09A128536CC0003AD86B /* LoginError.swift */; };
+		CDAF09A328536CC0003AD86B /* LoginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAF09A128536CC0003AD86B /* LoginError.swift */; };
 		CDB44DB9284FC32600DDBE87 /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = CDB44DB8284FC32600DDBE87 /* SFSafeSymbols */; };
 		CDB44DBC284FC34500DDBE87 /* InfoMationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DBB284FC34500DDBE87 /* InfoMationDetailView.swift */; };
 		CDB44DBD284FC34500DDBE87 /* InfoMationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DBB284FC34500DDBE87 /* InfoMationDetailView.swift */; };
@@ -133,6 +137,8 @@
 		CD138228284FC20500A24CF1 /* cryptoPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cryptoPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD13822E284FC20500A24CF1 /* cryptoPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cryptoPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD138230284FC20500A24CF1 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		CDAF099E28536C9B003AD86B /* LoginRequiredView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequiredView.swift; sourceTree = "<group>"; };
+		CDAF09A128536CC0003AD86B /* LoginError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginError.swift; sourceTree = "<group>"; };
 		CDB44DBB284FC34500DDBE87 /* InfoMationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoMationDetailView.swift; sourceTree = "<group>"; };
 		CDB44DBE284FC43E00DDBE87 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		CDB44DC2284FC55800DDBE87 /* Introduction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Introduction.swift; sourceTree = "<group>"; };
@@ -324,6 +330,7 @@
 		CDB44DE628508E8400DDBE87 /* components */ = {
 			isa = PBXGroup;
 			children = (
+				CDAF099E28536C9B003AD86B /* LoginRequiredView.swift */,
 				CDB44DBB284FC34500DDBE87 /* InfoMationDetailView.swift */,
 				CDB44DBE284FC43E00DDBE87 /* TitleView.swift */,
 				CDB44DC6284FCBAF00DDBE87 /* FilledButton.swift */,
@@ -377,6 +384,7 @@
 		CDB44E282851BEED00DDBE87 /* errors */ = {
 			isa = PBXGroup;
 			children = (
+				CDAF09A128536CC0003AD86B /* LoginError.swift */,
 				CDB44E292851BEF800DDBE87 /* TransactionError.swift */,
 				CDB44E2C2851C4C600DDBE87 /* PrivateKeyError.swift */,
 			);
@@ -600,6 +608,8 @@
 				CDB44DF92850B56700DDBE87 /* PasswordForm.swift in Sources */,
 				CDB44E5A28526EF600DDBE87 /* PasswordListModel.swift in Sources */,
 				CDB44DD728504CD600DDBE87 /* UserAccountModel.swift in Sources */,
+				CDAF099F28536C9B003AD86B /* LoginRequiredView.swift in Sources */,
+				CDAF09A228536CC0003AD86B /* LoginError.swift in Sources */,
 				CD13824B284FC20500A24CF1 /* cryptoPassApp.swift in Sources */,
 				CDB44E262851B59100DDBE87 /* AuthenticationModel.swift in Sources */,
 				CDB44E3C2851D34C00DDBE87 /* Transaction.swift in Sources */,
@@ -655,6 +665,8 @@
 				CDB44DEB28508EDC00DDBE87 /* CryptoPassContract.swift in Sources */,
 				CDB44DEF2850A11B00DDBE87 /* BigInt+extension.swift in Sources */,
 				CDB44DFA2850B56700DDBE87 /* PasswordForm.swift in Sources */,
+				CDAF09A028536C9B003AD86B /* LoginRequiredView.swift in Sources */,
+				CDAF09A328536CC0003AD86B /* LoginError.swift in Sources */,
 				CDB44DD828504CD600DDBE87 /* UserAccountModel.swift in Sources */,
 				CD13824C284FC20500A24CF1 /* cryptoPassApp.swift in Sources */,
 				CDB44E9D28532BF300DDBE87 /* CommonPassword.swift in Sources */,
