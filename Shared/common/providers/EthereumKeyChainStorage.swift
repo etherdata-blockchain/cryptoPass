@@ -28,17 +28,20 @@ class EthereumKeyChainStorage: EthereumKeyStorageProtocol{
        
     
     func loadPrivateKey() throws -> Data{
-        let stringData = try valet.string(forKey: KeyName.privateKeyName.rawValue)
-        if let data = stringData.web3.hexData{
-            // loading not encrypted data
-            return data
+        do {
+            let stringData = try valet.string(forKey: KeyName.privateKeyName.rawValue)
+            if let data = stringData.web3.hexData{
+                // loading not encrypted data
+                return data
+            }
+            
+            // loading encrypted data
+            if let data = stringData.data(using: .utf8){
+                return data
+            }
+            throw PrivateKeyError.invalidPrivateKey
+        } catch KeychainError.itemNotFound{
+            throw PrivateKeyError.privateKeyNotFound
         }
-        
-        // loading encrypted data
-        if let data = stringData.data(using: .utf8){
-            return data
-        }
-     
-        throw PrivateKeyError.privateKeyNotFound
     }
 }
