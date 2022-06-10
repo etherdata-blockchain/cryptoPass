@@ -14,13 +14,12 @@ class UserAccountModel: ObservableObject{
     @Published var hasInitAccount: Bool = false
     @Published var shouldInitAccount = true
     @Published var privateKey: Data?
+    private let storage = EthereumKeyChainStorage()
     
     init(){
-        let storage = EthereumKeyLocalStorage()
         do {
-            privateKey = try storage.loadAndDecryptPrivateKey(keystorePassword: "123")
-            //TODO: Replace 123
-            userAccount = try EthereumAccount.init(keyStorage: storage, keystorePassword: "123")
+            privateKey = try storage.loadPrivateKey()
+            userAccount = try EthereumAccount.init(keyStorage: storage)
             shouldInitAccount = false
             hasInitAccount = true
         } catch EthereumKeyStorageError.failedToLoad {
@@ -30,10 +29,10 @@ class UserAccountModel: ObservableObject{
         }
     }
     
-    func importAccount(privateKey: String, password: String) throws{
-        let keyStoreage = EthereumKeyLocalStorage()
+    func importAccount(privateKey: String) throws{
+        let keyStoreage = EthereumKeyChainStorage()
         //TODO: Replace 123
-        userAccount = try EthereumAccount.importAccount(keyStorage: keyStoreage, privateKey: privateKey, keystorePassword: "123")
+        userAccount = try EthereumAccount.importAccount(keyStorage: keyStoreage, privateKey: privateKey)
         self.privateKey = privateKey.web3.hexData
     }
     

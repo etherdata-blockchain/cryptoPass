@@ -62,8 +62,6 @@ struct PasswordList: View {
                     }
                 }
             }
-            
-            
         }
         .navigationTitle(Text("Password"))
         .refreshable {

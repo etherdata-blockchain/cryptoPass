@@ -34,7 +34,7 @@ class TransactionModel: ObservableObject{
     @MainActor
     func sendTransaction(with client: EthereumClient, account: EthereumAccount)async throws{
         if let transaction = transaction {
-            if transactionStatus == .confirming {
+            if transactionStatus == .confirming || transactionStatus == .failed {
                 transactionStatus = .sending
                 do {
                     transactionId = try await client.eth_sendRawTransaction(transaction, withAccount: account)

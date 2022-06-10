@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CD13823A284FC20500A24CF1 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD138239284FC20500A24CF1 /* Tests_iOS.swift */; };
-		CD13823C284FC20500A24CF1 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD13823B284FC20500A24CF1 /* Tests_iOSLaunchTests.swift */; };
-		CD138246284FC20500A24CF1 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD138245284FC20500A24CF1 /* Tests_macOS.swift */; };
-		CD138248284FC20500A24CF1 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD138247284FC20500A24CF1 /* Tests_macOSLaunchTests.swift */; };
 		CD138249284FC20500A24CF1 /* cryptoPass.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CD13821E284FC20500A24CF1 /* cryptoPass.xcdatamodeld */; };
 		CD13824A284FC20500A24CF1 /* cryptoPass.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CD13821E284FC20500A24CF1 /* cryptoPass.xcdatamodeld */; };
 		CD13824B284FC20500A24CF1 /* cryptoPassApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD138220284FC20500A24CF1 /* cryptoPassApp.swift */; };
@@ -103,22 +99,28 @@
 		CDB44E58285268A100DDBE87 /* Struct+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E56285268A100DDBE87 /* Struct+extension.swift */; };
 		CDB44E5A28526EF600DDBE87 /* PasswordListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E5928526EF600DDBE87 /* PasswordListModel.swift */; };
 		CDB44E5B28526EF600DDBE87 /* PasswordListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E5928526EF600DDBE87 /* PasswordListModel.swift */; };
+		CDB44E5E28531D2800DDBE87 /* EthereumKeyChainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E5D28531D2800DDBE87 /* EthereumKeyChainStorage.swift */; };
+		CDB44E6228531FED00DDBE87 /* Valet in Frameworks */ = {isa = PBXBuildFile; productRef = CDB44E6128531FED00DDBE87 /* Valet */; };
+		CDB44E64285320AA00DDBE87 /* KeyName.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E63285320AA00DDBE87 /* KeyName.swift */; };
+		CDB44E82285329A500DDBE87 /* KeyName.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E63285320AA00DDBE87 /* KeyName.swift */; };
+		CDB44E9D28532BF300DDBE87 /* CommonPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E512852438A00DDBE87 /* CommonPassword.swift */; };
+		CDB44EA928532C2600DDBE87 /* TransactionStatus+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E492851F74300DDBE87 /* TransactionStatus+extension.swift */; };
+		CDB44F092853300C00DDBE87 /* Tests_EthereumKeyStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44F0728532D4300DDBE87 /* Tests_EthereumKeyStorage.swift */; };
+		CDB44F0C2853331500DDBE87 /* Valet in Frameworks */ = {isa = PBXBuildFile; productRef = CDB44F0B2853331500DDBE87 /* Valet */; };
+		CDB44F0D2853332500DDBE87 /* EthereumKeyChainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E5D28531D2800DDBE87 /* EthereumKeyChainStorage.swift */; };
+		CDB44F0E2853332A00DDBE87 /* transaction_receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E452851EE6D00DDBE87 /* transaction_receipt.swift */; };
+		CDB44F0F2853333800DDBE87 /* PasswordRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E4F2852407F00DDBE87 /* PasswordRow.swift */; };
+		CDB44F11285342C400DDBE87 /* EthereumAccount+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44F10285342C400DDBE87 /* EthereumAccount+extension.swift */; };
+		CDB44F12285342C400DDBE87 /* EthereumAccount+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44F10285342C400DDBE87 /* EthereumAccount+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CD138236284FC20500A24CF1 /* PBXContainerItemProxy */ = {
+		CDB44ECB28532CFA00DDBE87 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CD138219284FC20400A24CF1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = CD138227284FC20500A24CF1;
 			remoteInfo = "cryptoPass (iOS)";
-		};
-		CD138242284FC20500A24CF1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CD138219284FC20400A24CF1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CD13822D284FC20500A24CF1;
-			remoteInfo = "cryptoPass (macOS)";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -131,12 +133,6 @@
 		CD138228284FC20500A24CF1 /* cryptoPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cryptoPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD13822E284FC20500A24CF1 /* cryptoPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cryptoPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD138230284FC20500A24CF1 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		CD138235284FC20500A24CF1 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD138239284FC20500A24CF1 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
-		CD13823B284FC20500A24CF1 /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOSLaunchTests.swift; sourceTree = "<group>"; };
-		CD138241284FC20500A24CF1 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD138245284FC20500A24CF1 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
-		CD138247284FC20500A24CF1 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		CDB44DBB284FC34500DDBE87 /* InfoMationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoMationDetailView.swift; sourceTree = "<group>"; };
 		CDB44DBE284FC43E00DDBE87 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		CDB44DC2284FC55800DDBE87 /* Introduction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Introduction.swift; sourceTree = "<group>"; };
@@ -178,6 +174,12 @@
 		CDB44E53285265CF00DDBE87 /* PasswordFormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordFormModel.swift; sourceTree = "<group>"; };
 		CDB44E56285268A100DDBE87 /* Struct+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Struct+extension.swift"; sourceTree = "<group>"; };
 		CDB44E5928526EF600DDBE87 /* PasswordListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordListModel.swift; sourceTree = "<group>"; };
+		CDB44E5D28531D2800DDBE87 /* EthereumKeyChainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthereumKeyChainStorage.swift; sourceTree = "<group>"; };
+		CDB44E63285320AA00DDBE87 /* KeyName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyName.swift; sourceTree = "<group>"; };
+		CDB44EC728532CFA00DDBE87 /* Tests Shared.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests Shared.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDB44F0728532D4300DDBE87 /* Tests_EthereumKeyStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_EthereumKeyStorage.swift; sourceTree = "<group>"; };
+		CDB44F0A285331EC00DDBE87 /* cryptoPass (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "cryptoPass (iOS).entitlements"; sourceTree = "<group>"; };
+		CDB44F10285342C400DDBE87 /* EthereumAccount+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EthereumAccount+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDB44E6228531FED00DDBE87 /* Valet in Frameworks */,
 				CDB44DD1284FD3F600DDBE87 /* web3.swift in Frameworks */,
 				CDB44DB9284FC32600DDBE87 /* SFSafeSymbols in Frameworks */,
 			);
@@ -194,19 +197,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDB44F0C2853331500DDBE87 /* Valet in Frameworks */,
 				CDB44DF42850A84A00DDBE87 /* SFSafeSymbols in Frameworks */,
 				CDB44DF22850A83B00DDBE87 /* web3.swift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CD138232284FC20500A24CF1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CD13823E284FC20500A24CF1 /* Frameworks */ = {
+		CDB44EC428532CFA00DDBE87 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -219,10 +216,10 @@
 		CD138218284FC20400A24CF1 = {
 			isa = PBXGroup;
 			children = (
+				CDB44F0A285331EC00DDBE87 /* cryptoPass (iOS).entitlements */,
 				CD13821D284FC20500A24CF1 /* Shared */,
 				CD13822F284FC20500A24CF1 /* macOS */,
-				CD138238284FC20500A24CF1 /* Tests iOS */,
-				CD138244284FC20500A24CF1 /* Tests macOS */,
+				CDB44EC828532CFA00DDBE87 /* Tests Shared */,
 				CD138229284FC20500A24CF1 /* Products */,
 				CDB44DF02850A83B00DDBE87 /* Frameworks */,
 			);
@@ -231,7 +228,6 @@
 		CD13821D284FC20500A24CF1 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				CDB44E4B28521E6500DDBE87 /* contracts */,
 				CDB44DEC2850A0F600DDBE87 /* extensions */,
 				CDB44DD528504CC600DDBE87 /* models */,
 				CDB44DC1284FC54A00DDBE87 /* pages */,
@@ -250,8 +246,7 @@
 			children = (
 				CD138228284FC20500A24CF1 /* cryptoPass.app */,
 				CD13822E284FC20500A24CF1 /* cryptoPass.app */,
-				CD138235284FC20500A24CF1 /* Tests iOS.xctest */,
-				CD138241284FC20500A24CF1 /* Tests macOS.xctest */,
+				CDB44EC728532CFA00DDBE87 /* Tests Shared.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -264,27 +259,10 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
-		CD138238284FC20500A24CF1 /* Tests iOS */ = {
-			isa = PBXGroup;
-			children = (
-				CD138239284FC20500A24CF1 /* Tests_iOS.swift */,
-				CD13823B284FC20500A24CF1 /* Tests_iOSLaunchTests.swift */,
-			);
-			path = "Tests iOS";
-			sourceTree = "<group>";
-		};
-		CD138244284FC20500A24CF1 /* Tests macOS */ = {
-			isa = PBXGroup;
-			children = (
-				CD138245284FC20500A24CF1 /* Tests_macOS.swift */,
-				CD138247284FC20500A24CF1 /* Tests_macOSLaunchTests.swift */,
-			);
-			path = "Tests macOS";
-			sourceTree = "<group>";
-		};
 		CDB44DBA284FC32C00DDBE87 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				CDB44E5C28531D1000DDBE87 /* providers */,
 				CDB44E442851EE5500DDBE87 /* mockdata */,
 				CDB44E3A2851D33D00DDBE87 /* enums */,
 				CDB44E282851BEED00DDBE87 /* errors */,
@@ -384,6 +362,7 @@
 				CDB44E3E2851E03400DDBE87 /* EthereumClient+extension.swift */,
 				CDB44E492851F74300DDBE87 /* TransactionStatus+extension.swift */,
 				CDB44E56285268A100DDBE87 /* Struct+extension.swift */,
+				CDB44F10285342C400DDBE87 /* EthereumAccount+extension.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -418,6 +397,7 @@
 			isa = PBXGroup;
 			children = (
 				CDB44E3B2851D34C00DDBE87 /* Transaction.swift */,
+				CDB44E63285320AA00DDBE87 /* KeyName.swift */,
 			);
 			path = enums;
 			sourceTree = "<group>";
@@ -430,11 +410,20 @@
 			path = mockdata;
 			sourceTree = "<group>";
 		};
-		CDB44E4B28521E6500DDBE87 /* contracts */ = {
+		CDB44E5C28531D1000DDBE87 /* providers */ = {
 			isa = PBXGroup;
 			children = (
+				CDB44E5D28531D2800DDBE87 /* EthereumKeyChainStorage.swift */,
 			);
-			path = contracts;
+			path = providers;
+			sourceTree = "<group>";
+		};
+		CDB44EC828532CFA00DDBE87 /* Tests Shared */ = {
+			isa = PBXGroup;
+			children = (
+				CDB44F0728532D4300DDBE87 /* Tests_EthereumKeyStorage.swift */,
+			);
+			path = "Tests Shared";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -456,6 +445,7 @@
 			packageProductDependencies = (
 				CDB44DB8284FC32600DDBE87 /* SFSafeSymbols */,
 				CDB44DD0284FD3F600DDBE87 /* web3.swift */,
+				CDB44E6128531FED00DDBE87 /* Valet */,
 			);
 			productName = "cryptoPass (iOS)";
 			productReference = CD138228284FC20500A24CF1 /* cryptoPass.app */;
@@ -477,46 +467,29 @@
 			packageProductDependencies = (
 				CDB44DF12850A83B00DDBE87 /* web3.swift */,
 				CDB44DF32850A84A00DDBE87 /* SFSafeSymbols */,
+				CDB44F0B2853331500DDBE87 /* Valet */,
 			);
 			productName = "cryptoPass (macOS)";
 			productReference = CD13822E284FC20500A24CF1 /* cryptoPass.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CD138234284FC20500A24CF1 /* Tests iOS */ = {
+		CDB44EC628532CFA00DDBE87 /* Tests Shared */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CD13825B284FC20500A24CF1 /* Build configuration list for PBXNativeTarget "Tests iOS" */;
+			buildConfigurationList = CDB44ECD28532CFA00DDBE87 /* Build configuration list for PBXNativeTarget "Tests Shared" */;
 			buildPhases = (
-				CD138231284FC20500A24CF1 /* Sources */,
-				CD138232284FC20500A24CF1 /* Frameworks */,
-				CD138233284FC20500A24CF1 /* Resources */,
+				CDB44EC328532CFA00DDBE87 /* Sources */,
+				CDB44EC428532CFA00DDBE87 /* Frameworks */,
+				CDB44EC528532CFA00DDBE87 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CD138237284FC20500A24CF1 /* PBXTargetDependency */,
+				CDB44ECC28532CFA00DDBE87 /* PBXTargetDependency */,
 			);
-			name = "Tests iOS";
-			productName = "Tests iOS";
-			productReference = CD138235284FC20500A24CF1 /* Tests iOS.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-		CD138240284FC20500A24CF1 /* Tests macOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CD13825E284FC20500A24CF1 /* Build configuration list for PBXNativeTarget "Tests macOS" */;
-			buildPhases = (
-				CD13823D284FC20500A24CF1 /* Sources */,
-				CD13823E284FC20500A24CF1 /* Frameworks */,
-				CD13823F284FC20500A24CF1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CD138243284FC20500A24CF1 /* PBXTargetDependency */,
-			);
-			name = "Tests macOS";
-			productName = "Tests macOS";
-			productReference = CD138241284FC20500A24CF1 /* Tests macOS.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
+			name = "Tests Shared";
+			productName = "Tests Shared";
+			productReference = CDB44EC728532CFA00DDBE87 /* Tests Shared.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -534,13 +507,9 @@
 					CD13822D284FC20500A24CF1 = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
-					CD138234284FC20500A24CF1 = {
+					CDB44EC628532CFA00DDBE87 = {
 						CreatedOnToolsVersion = 13.4.1;
 						TestTargetID = CD138227284FC20500A24CF1;
-					};
-					CD138240284FC20500A24CF1 = {
-						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = CD13822D284FC20500A24CF1;
 					};
 				};
 			};
@@ -556,6 +525,7 @@
 			packageReferences = (
 				CDB44DB7284FC32600DDBE87 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */,
 				CDB44DCF284FD3F600DDBE87 /* XCRemoteSwiftPackageReference "web3" */,
+				CDB44E6028531FED00DDBE87 /* XCRemoteSwiftPackageReference "Valet" */,
 			);
 			productRefGroup = CD138229284FC20500A24CF1 /* Products */;
 			projectDirPath = "";
@@ -563,8 +533,7 @@
 			targets = (
 				CD138227284FC20500A24CF1 /* cryptoPass (iOS) */,
 				CD13822D284FC20500A24CF1 /* cryptoPass (macOS) */,
-				CD138234284FC20500A24CF1 /* Tests iOS */,
-				CD138240284FC20500A24CF1 /* Tests macOS */,
+				CDB44EC628532CFA00DDBE87 /* Tests Shared */,
 			);
 		};
 /* End PBXProject section */
@@ -586,14 +555,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CD138233284FC20500A24CF1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CD13823F284FC20500A24CF1 /* Resources */ = {
+		CDB44EC528532CFA00DDBE87 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -625,12 +587,14 @@
 				CDB44DE1285086CC00DDBE87 /* InfoCard.swift in Sources */,
 				CDB44DD32850482900DDBE87 /* UserAccount.swift in Sources */,
 				CDB44DF62850AF6D00DDBE87 /* Password.swift in Sources */,
+				CDB44E64285320AA00DDBE87 /* KeyName.swift in Sources */,
 				CDB44E382851D1BC00DDBE87 /* TransactionDetail.swift in Sources */,
 				CDB44DDE2850807900DDBE87 /* Environments.swift in Sources */,
 				CDB44E0B2850DE0B00DDBE87 /* PaymentCardFormView.swift in Sources */,
 				CDB44DDB28504F7B00DDBE87 /* PasswordList.swift in Sources */,
 				CDB44E2A2851BEF800DDBE87 /* TransactionError.swift in Sources */,
 				CDB44DBC284FC34500DDBE87 /* InfoMationDetailView.swift in Sources */,
+				CDB44E5E28531D2800DDBE87 /* EthereumKeyChainStorage.swift in Sources */,
 				CDB44DEA28508EDC00DDBE87 /* CryptoPassContract.swift in Sources */,
 				CDB44DEE2850A11B00DDBE87 /* BigInt+extension.swift in Sources */,
 				CDB44DF92850B56700DDBE87 /* PasswordForm.swift in Sources */,
@@ -651,6 +615,7 @@
 				CDB44DCD284FCDD800DDBE87 /* PrivateKeyView.swift in Sources */,
 				CDB44E2D2851C4C600DDBE87 /* PrivateKeyError.swift in Sources */,
 				CDB44E57285268A100DDBE87 /* Struct+extension.swift in Sources */,
+				CDB44F11285342C400DDBE87 /* EthereumAccount+extension.swift in Sources */,
 				CDB44DBF284FC43E00DDBE87 /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -670,16 +635,20 @@
 				CDB44E5B28526EF600DDBE87 /* PasswordListModel.swift in Sources */,
 				CDB44E322851C8D400DDBE87 /* LoadingView.swift in Sources */,
 				CD13824A284FC20500A24CF1 /* cryptoPass.xcdatamodeld in Sources */,
+				CDB44EA928532C2600DDBE87 /* TransactionStatus+extension.swift in Sources */,
 				CDB44DC8284FCBAF00DDBE87 /* FilledButton.swift in Sources */,
+				CDB44E82285329A500DDBE87 /* KeyName.swift in Sources */,
 				CDB44DFD2850B8A900DDBE87 /* TextEditorWithPlaceholder.swift in Sources */,
 				CDB44E002850C71D00DDBE87 /* BankFormView.swift in Sources */,
 				CD138250284FC20500A24CF1 /* Persistence.swift in Sources */,
+				CDB44F0D2853332500DDBE87 /* EthereumKeyChainStorage.swift in Sources */,
 				CDB44DE2285086CC00DDBE87 /* InfoCard.swift in Sources */,
 				CDB44DD42850482900DDBE87 /* UserAccount.swift in Sources */,
 				CDB44DF72850AF6D00DDBE87 /* Password.swift in Sources */,
 				CDB44E392851D1BC00DDBE87 /* TransactionDetail.swift in Sources */,
 				CDB44DDF2850807900DDBE87 /* Environments.swift in Sources */,
 				CDB44E0C2850DE0B00DDBE87 /* PaymentCardFormView.swift in Sources */,
+				CDB44F0F2853333800DDBE87 /* PasswordRow.swift in Sources */,
 				CDB44DDC28504F7B00DDBE87 /* PasswordList.swift in Sources */,
 				CDB44E2B2851BEF800DDBE87 /* TransactionError.swift in Sources */,
 				CDB44DBD284FC34500DDBE87 /* InfoMationDetailView.swift in Sources */,
@@ -688,6 +657,8 @@
 				CDB44DFA2850B56700DDBE87 /* PasswordForm.swift in Sources */,
 				CDB44DD828504CD600DDBE87 /* UserAccountModel.swift in Sources */,
 				CD13824C284FC20500A24CF1 /* cryptoPassApp.swift in Sources */,
+				CDB44E9D28532BF300DDBE87 /* CommonPassword.swift in Sources */,
+				CDB44F0E2853332A00DDBE87 /* transaction_receipt.swift in Sources */,
 				CDB44E272851B59100DDBE87 /* AuthenticationModel.swift in Sources */,
 				CDB44E3D2851D34C00DDBE87 /* Transaction.swift in Sources */,
 				CDB44E1E2851A4F600DDBE87 /* ConfirmationPage.swift in Sources */,
@@ -699,40 +670,26 @@
 				CDB44DE528508C3B00DDBE87 /* Config.swift in Sources */,
 				CDB44DCE284FCDD800DDBE87 /* PrivateKeyView.swift in Sources */,
 				CDB44E2E2851C4C600DDBE87 /* PrivateKeyError.swift in Sources */,
+				CDB44F12285342C400DDBE87 /* EthereumAccount+extension.swift in Sources */,
 				CDB44DC0284FC43E00DDBE87 /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CD138231284FC20500A24CF1 /* Sources */ = {
+		CDB44EC328532CFA00DDBE87 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD13823C284FC20500A24CF1 /* Tests_iOSLaunchTests.swift in Sources */,
-				CD13823A284FC20500A24CF1 /* Tests_iOS.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CD13823D284FC20500A24CF1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CD138248284FC20500A24CF1 /* Tests_macOSLaunchTests.swift in Sources */,
-				CD138246284FC20500A24CF1 /* Tests_macOS.swift in Sources */,
+				CDB44F092853300C00DDBE87 /* Tests_EthereumKeyStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CD138237284FC20500A24CF1 /* PBXTargetDependency */ = {
+		CDB44ECC28532CFA00DDBE87 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CD138227284FC20500A24CF1 /* cryptoPass (iOS) */;
-			targetProxy = CD138236284FC20500A24CF1 /* PBXContainerItemProxy */;
-		};
-		CD138243284FC20500A24CF1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CD13822D284FC20500A24CF1 /* cryptoPass (macOS) */;
-			targetProxy = CD138242284FC20500A24CF1 /* PBXContainerItemProxy */;
+			targetProxy = CDB44ECB28532CFA00DDBE87 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -851,6 +808,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "cryptoPass (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P9KK452K8P;
@@ -871,6 +829,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sirilee.cryptoPass;
 				PRODUCT_NAME = cryptoPass;
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -882,6 +841,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "cryptoPass (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P9KK452K8P;
@@ -902,6 +862,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sirilee.cryptoPass;
 				PRODUCT_NAME = cryptoPass;
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -965,82 +926,44 @@
 			};
 			name = Release;
 		};
-		CD13825C284FC20500A24CF1 /* Debug */ = {
+		CDB44ECE28532CFA00DDBE87 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P9KK452K8P;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sirilee.Tests-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sirilee.Tests-Shared";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "cryptoPass (iOS)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cryptoPass.app/cryptoPass";
 			};
 			name = Debug;
 		};
-		CD13825D284FC20500A24CF1 /* Release */ = {
+		CDB44ECF28532CFA00DDBE87 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P9KK452K8P;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sirilee.Tests-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sirilee.Tests-Shared";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "cryptoPass (iOS)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cryptoPass.app/cryptoPass";
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		CD13825F284FC20500A24CF1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P9KK452K8P;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sirilee.Tests-macOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "cryptoPass (macOS)";
-			};
-			name = Debug;
-		};
-		CD138260284FC20500A24CF1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P9KK452K8P;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sirilee.Tests-macOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "cryptoPass (macOS)";
 			};
 			name = Release;
 		};
@@ -1074,20 +997,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CD13825B284FC20500A24CF1 /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
+		CDB44ECD28532CFA00DDBE87 /* Build configuration list for PBXNativeTarget "Tests Shared" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CD13825C284FC20500A24CF1 /* Debug */,
-				CD13825D284FC20500A24CF1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CD13825E284FC20500A24CF1 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CD13825F284FC20500A24CF1 /* Debug */,
-				CD138260284FC20500A24CF1 /* Release */,
+				CDB44ECE28532CFA00DDBE87 /* Debug */,
+				CDB44ECF28532CFA00DDBE87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1109,6 +1023,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.0.0;
+			};
+		};
+		CDB44E6028531FED00DDBE87 /* XCRemoteSwiftPackageReference "Valet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/square/Valet";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -1133,6 +1055,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CDB44DB7284FC32600DDBE87 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;
 			productName = SFSafeSymbols;
+		};
+		CDB44E6128531FED00DDBE87 /* Valet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDB44E6028531FED00DDBE87 /* XCRemoteSwiftPackageReference "Valet" */;
+			productName = Valet;
+		};
+		CDB44F0B2853331500DDBE87 /* Valet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDB44E6028531FED00DDBE87 /* XCRemoteSwiftPackageReference "Valet" */;
+			productName = Valet;
 		};
 /* End XCSwiftPackageProductDependency section */
 
