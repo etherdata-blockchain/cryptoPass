@@ -30,9 +30,6 @@ class PasswordFormModel: ObservableObject{
             selection = .website
         }
         basePassword = password.toBasePassword()
-        print("Origin password: \(password.originPassword)")
-        print("website password: \(self.websitePassword)")
-        print("Base password: \(basePassword)")
     }
     
     func prepareSubmissionData() -> Data?{
