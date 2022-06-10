@@ -11,6 +11,8 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: origin/main
       - uses: yanamura/ios-bump-version@v1
         with:
           version: ${{ github.event.release.tag_name }}
