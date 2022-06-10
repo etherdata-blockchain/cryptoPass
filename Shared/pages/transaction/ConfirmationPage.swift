@@ -22,7 +22,7 @@ struct ConfirmationPage: View {
     @State private var nonce: Int?
     @State private var err: TransacionError?
     @State private var showError = false
-    @State private var selection: Int?
+    @State private var selection: Routes?
     @State private var chainId: Int?
     
     
@@ -30,7 +30,7 @@ struct ConfirmationPage: View {
         NavigationView {
             VStack{
                 if let transactionId = transactionModel.transactionId{
-                    NavigationLink(destination: TransactionDetail(transactionHash: transactionId, fromConfirmation: true), tag: 1, selection: $selection){
+                    NavigationLink(destination: TransactionDetail(transactionHash: transactionId, fromConfirmation: true), tag: Routes.showTransactionPage, selection: $selection){
                         
                     }
                 }
@@ -119,7 +119,7 @@ struct ConfirmationPage: View {
                     Task{
                         do{
                             try await transactionModel.sendTransaction(with: ethereumModel.ethereumClient, account: userAccountModel.userAccount!)
-                            selection = 1
+                            selection = Routes.showTransactionPage
                         } catch let error as TransacionError {
                             self.err = error
                             self.showError = true

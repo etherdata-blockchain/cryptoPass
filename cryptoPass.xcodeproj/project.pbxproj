@@ -21,6 +21,8 @@
 		CDAF09A028536C9B003AD86B /* LoginRequiredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAF099E28536C9B003AD86B /* LoginRequiredView.swift */; };
 		CDAF09A228536CC0003AD86B /* LoginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAF09A128536CC0003AD86B /* LoginError.swift */; };
 		CDAF09A328536CC0003AD86B /* LoginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAF09A128536CC0003AD86B /* LoginError.swift */; };
+		CDAF09A52853704B003AD86B /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAF09A42853704B003AD86B /* Routes.swift */; };
+		CDAF09A62853704B003AD86B /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAF09A42853704B003AD86B /* Routes.swift */; };
 		CDB44DB9284FC32600DDBE87 /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = CDB44DB8284FC32600DDBE87 /* SFSafeSymbols */; };
 		CDB44DBC284FC34500DDBE87 /* InfoMationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DBB284FC34500DDBE87 /* InfoMationDetailView.swift */; };
 		CDB44DBD284FC34500DDBE87 /* InfoMationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DBB284FC34500DDBE87 /* InfoMationDetailView.swift */; };
@@ -139,6 +141,7 @@
 		CD138230284FC20500A24CF1 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		CDAF099E28536C9B003AD86B /* LoginRequiredView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequiredView.swift; sourceTree = "<group>"; };
 		CDAF09A128536CC0003AD86B /* LoginError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginError.swift; sourceTree = "<group>"; };
+		CDAF09A42853704B003AD86B /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
 		CDB44DBB284FC34500DDBE87 /* InfoMationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoMationDetailView.swift; sourceTree = "<group>"; };
 		CDB44DBE284FC43E00DDBE87 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		CDB44DC2284FC55800DDBE87 /* Introduction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Introduction.swift; sourceTree = "<group>"; };
@@ -347,6 +350,7 @@
 			children = (
 				CDB44DDD2850807900DDBE87 /* Environments.swift */,
 				CDB44DE328508C3B00DDBE87 /* Config.swift */,
+				CDAF09A42853704B003AD86B /* Routes.swift */,
 			);
 			path = settings;
 			sourceTree = "<group>";
@@ -587,6 +591,7 @@
 				CDB44E312851C8D400DDBE87 /* LoadingView.swift in Sources */,
 				CDB44E502852407F00DDBE87 /* PasswordRow.swift in Sources */,
 				CDB44E522852438A00DDBE87 /* CommonPassword.swift in Sources */,
+				CDAF09A52853704B003AD86B /* Routes.swift in Sources */,
 				CD138249284FC20500A24CF1 /* cryptoPass.xcdatamodeld in Sources */,
 				CDB44DC7284FCBAF00DDBE87 /* FilledButton.swift in Sources */,
 				CDB44DFC2850B8A900DDBE87 /* TextEditorWithPlaceholder.swift in Sources */,
@@ -644,6 +649,7 @@
 				CDB44E212851A8D800DDBE87 /* FormTextField.swift in Sources */,
 				CDB44E5B28526EF600DDBE87 /* PasswordListModel.swift in Sources */,
 				CDB44E322851C8D400DDBE87 /* LoadingView.swift in Sources */,
+				CDAF09A62853704B003AD86B /* Routes.swift in Sources */,
 				CD13824A284FC20500A24CF1 /* cryptoPass.xcdatamodeld in Sources */,
 				CDB44EA928532C2600DDBE87 /* TransactionStatus+extension.swift in Sources */,
 				CDB44DC8284FCBAF00DDBE87 /* FilledButton.swift in Sources */,
