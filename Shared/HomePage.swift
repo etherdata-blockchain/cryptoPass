@@ -14,14 +14,22 @@ struct HomePage: View {
     @EnvironmentObject var ethereumModel: EthereumModel
  
     @Environment(\.managedObjectContext) private var viewContext
-    
+
     
     var body: some View {
         NavigationView {
             if let _ = userAccountModel.userAccount{
-                PasswordList()
+                LoginRequiredView {
+                    TitleView(icon: .dotsAndLineVerticalAndCursorarrowRectangle, subtitle: "CryptoPass")
+                } child: {
+                    PasswordList()
+                }
+
             }
             TitleView(icon: .dotsAndLineVerticalAndCursorarrowRectangle, subtitle: "CryptoPass")
+        }
+        .onAppear{
+            userAccountModel.initialize()
         }
         .onReceive(userAccountModel.$userAccount, perform: { account in
             if let account = account{
