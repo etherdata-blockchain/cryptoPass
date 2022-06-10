@@ -1,2 +1,4 @@
 *.xcconfig
 secrets.xcconfig
+build
+cryptoPass.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved

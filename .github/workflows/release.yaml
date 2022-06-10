@@ -1,0 +1,20 @@
+name: Release docker image
+
+on:
+  release:
+    types:
+      - released
+
+jobs:
+  bump-version:
+    name: Bump xcode project version
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: yanamura/ios-bump-version@v1
+        with:
+          version: ${{ github.event.release.tag_name }}
+          build-number: ${{github.run_number}}
+      - uses: EndBug/add-and-commit@v9
+        with:
+          message: 'Release %{{ github.event.release.tag_name }}'

@@ -1,9 +1,21 @@
-name: Build Docker Image
+name: Build project
 
 on:
   push:
 
 jobs:
+  test:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest
+      # - name: Test
+        # run: xcodebuild test -target "cryptoPass (iOS)" -scheme "cryptoPass (iOS)" -destination "platform=iOS Simulator" | xcpretty  && exit ${PIPESTATUS[0]}
+      # - name: Build
+        # run: xcodebuild build test -target "cryptoPass (iOS)" -scheme "cryptoPass (iOS)" -destination "generic/platform=iOS" | xcpretty  && exit ${PIPESTATUS[0]}
   create-release:
     runs-on: ubuntu-latest
     permissions:
