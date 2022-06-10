@@ -22,10 +22,10 @@ class UserAccountModel: ObservableObject{
             userAccount = try EthereumAccount.init(keyStorage: storage)
             shouldInitAccount = false
             hasInitAccount = true
-        } catch EthereumKeyStorageError.failedToLoad {
+        } catch PrivateKeyError.privateKeyNotFound {
             shouldInitAccount = true
             print("No previous stored private key")
-        } catch{
+        }  catch{
             print(error.localizedDescription)
         }
     }
