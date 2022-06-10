@@ -20,7 +20,7 @@ struct HomePage: View {
         NavigationView {
             if let _ = userAccountModel.userAccount{
                 LoginRequiredView {
-                    TitleView(icon: .dotsAndLineVerticalAndCursorarrowRectangle, subtitle: "CryptoPass")
+                    Text("Login required")
                 } child: {
                     PasswordList()
                 }
