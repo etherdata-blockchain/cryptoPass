@@ -11,6 +11,6 @@ import Foundation
  System environments
  */
 struct Environments{
-    static let rpc = ProcessInfo.processInfo.environment["RPC"]
-    static let contractAddress = ProcessInfo.processInfo.environment["CONTRACT_ADDRESS"]
+    static let rpc = Bundle.main.object(forInfoDictionaryKey: "RPC_ENDPOINT") as? String
+    static let contractAddress = Bundle.main.object(forInfoDictionaryKey: "CONTRACT") as? String
 }
