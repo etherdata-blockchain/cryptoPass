@@ -25,7 +25,7 @@
 		CDAF09A328536CC0003AD86B /* LoginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAF09A128536CC0003AD86B /* LoginError.swift */; };
 		CDAF09A52853704B003AD86B /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAF09A42853704B003AD86B /* Routes.swift */; };
 		CDAF09A62853704B003AD86B /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAF09A42853704B003AD86B /* Routes.swift */; };
-		CDB44DB9284FC32600DDBE87 /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = CDB44DB8284FC32600DDBE87 /* SFSafeSymbols */; };
+		CDB44DB9284FC32600DDBE87 /* null in Frameworks */ = {isa = PBXBuildFile; productRef = CDB44DB8284FC32600DDBE87 /* XCSwiftPackageProductDependency */; };
 		CDB44DBC284FC34500DDBE87 /* InfoMationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DBB284FC34500DDBE87 /* InfoMationDetailView.swift */; };
 		CDB44DBD284FC34500DDBE87 /* InfoMationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DBB284FC34500DDBE87 /* InfoMationDetailView.swift */; };
 		CDB44DBF284FC43E00DDBE87 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DBE284FC43E00DDBE87 /* TitleView.swift */; };
@@ -38,7 +38,7 @@
 		CDB44DCB284FCCDE00DDBE87 /* IntroductionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DC9284FCCDE00DDBE87 /* IntroductionPage.swift */; };
 		CDB44DCD284FCDD800DDBE87 /* PrivateKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DCC284FCDD800DDBE87 /* PrivateKeyView.swift */; };
 		CDB44DCE284FCDD800DDBE87 /* PrivateKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DCC284FCDD800DDBE87 /* PrivateKeyView.swift */; };
-		CDB44DD1284FD3F600DDBE87 /* web3.swift in Frameworks */ = {isa = PBXBuildFile; productRef = CDB44DD0284FD3F600DDBE87 /* web3.swift */; };
+		CDB44DD1284FD3F600DDBE87 /* null in Frameworks */ = {isa = PBXBuildFile; productRef = CDB44DD0284FD3F600DDBE87 /* XCSwiftPackageProductDependency */; };
 		CDB44DD32850482900DDBE87 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DD22850482900DDBE87 /* UserAccount.swift */; };
 		CDB44DD42850482900DDBE87 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DD22850482900DDBE87 /* UserAccount.swift */; };
 		CDB44DD728504CD600DDBE87 /* UserAccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DD628504CD600DDBE87 /* UserAccountModel.swift */; };
@@ -55,8 +55,8 @@
 		CDB44DEB28508EDC00DDBE87 /* CryptoPassContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DE928508EDC00DDBE87 /* CryptoPassContract.swift */; };
 		CDB44DEE2850A11B00DDBE87 /* BigInt+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DED2850A11B00DDBE87 /* BigInt+extension.swift */; };
 		CDB44DEF2850A11B00DDBE87 /* BigInt+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DED2850A11B00DDBE87 /* BigInt+extension.swift */; };
-		CDB44DF22850A83B00DDBE87 /* web3.swift in Frameworks */ = {isa = PBXBuildFile; productRef = CDB44DF12850A83B00DDBE87 /* web3.swift */; };
-		CDB44DF42850A84A00DDBE87 /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = CDB44DF32850A84A00DDBE87 /* SFSafeSymbols */; };
+		CDB44DF22850A83B00DDBE87 /* null in Frameworks */ = {isa = PBXBuildFile; productRef = CDB44DF12850A83B00DDBE87 /* XCSwiftPackageProductDependency */; };
+		CDB44DF42850A84A00DDBE87 /* null in Frameworks */ = {isa = PBXBuildFile; productRef = CDB44DF32850A84A00DDBE87 /* XCSwiftPackageProductDependency */; };
 		CDB44DF62850AF6D00DDBE87 /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DF52850AF6D00DDBE87 /* Password.swift */; };
 		CDB44DF72850AF6D00DDBE87 /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DF52850AF6D00DDBE87 /* Password.swift */; };
 		CDB44DF92850B56700DDBE87 /* PasswordForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44DF82850B56700DDBE87 /* PasswordForm.swift */; };
@@ -108,13 +108,13 @@
 		CDB44E5A28526EF600DDBE87 /* PasswordListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E5928526EF600DDBE87 /* PasswordListModel.swift */; };
 		CDB44E5B28526EF600DDBE87 /* PasswordListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E5928526EF600DDBE87 /* PasswordListModel.swift */; };
 		CDB44E5E28531D2800DDBE87 /* EthereumKeyChainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E5D28531D2800DDBE87 /* EthereumKeyChainStorage.swift */; };
-		CDB44E6228531FED00DDBE87 /* Valet in Frameworks */ = {isa = PBXBuildFile; productRef = CDB44E6128531FED00DDBE87 /* Valet */; };
+		CDB44E6228531FED00DDBE87 /* null in Frameworks */ = {isa = PBXBuildFile; productRef = CDB44E6128531FED00DDBE87 /* XCSwiftPackageProductDependency */; };
 		CDB44E64285320AA00DDBE87 /* KeyName.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E63285320AA00DDBE87 /* KeyName.swift */; };
 		CDB44E82285329A500DDBE87 /* KeyName.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E63285320AA00DDBE87 /* KeyName.swift */; };
 		CDB44E9D28532BF300DDBE87 /* CommonPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E512852438A00DDBE87 /* CommonPassword.swift */; };
 		CDB44EA928532C2600DDBE87 /* TransactionStatus+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E492851F74300DDBE87 /* TransactionStatus+extension.swift */; };
 		CDB44F092853300C00DDBE87 /* Tests_EthereumKeyStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44F0728532D4300DDBE87 /* Tests_EthereumKeyStorage.swift */; };
-		CDB44F0C2853331500DDBE87 /* Valet in Frameworks */ = {isa = PBXBuildFile; productRef = CDB44F0B2853331500DDBE87 /* Valet */; };
+		CDB44F0C2853331500DDBE87 /* null in Frameworks */ = {isa = PBXBuildFile; productRef = CDB44F0B2853331500DDBE87 /* XCSwiftPackageProductDependency */; };
 		CDB44F0D2853332500DDBE87 /* EthereumKeyChainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E5D28531D2800DDBE87 /* EthereumKeyChainStorage.swift */; };
 		CDB44F0E2853332A00DDBE87 /* transaction_receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E452851EE6D00DDBE87 /* transaction_receipt.swift */; };
 		CDB44F0F2853333800DDBE87 /* PasswordRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB44E4F2852407F00DDBE87 /* PasswordRow.swift */; };
@@ -125,7 +125,7 @@
 /* Begin PBXContainerItemProxy section */
 		CDB44ECB28532CFA00DDBE87 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CD138219284FC20400A24CF1 /* Project object */;
+			containerPortal = CD138219284FC20400A24CF1;
 			proxyType = 1;
 			remoteGlobalIDString = CD138227284FC20500A24CF1;
 			remoteInfo = "cryptoPass (iOS)";
@@ -199,9 +199,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDB44E6228531FED00DDBE87 /* Valet in Frameworks */,
-				CDB44DD1284FD3F600DDBE87 /* web3.swift in Frameworks */,
-				CDB44DB9284FC32600DDBE87 /* SFSafeSymbols in Frameworks */,
+				CDB44E6228531FED00DDBE87 /* null in Frameworks */,
+				CDB44DD1284FD3F600DDBE87 /* null in Frameworks */,
+				CDB44DB9284FC32600DDBE87 /* null in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,9 +209,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDB44F0C2853331500DDBE87 /* Valet in Frameworks */,
-				CDB44DF42850A84A00DDBE87 /* SFSafeSymbols in Frameworks */,
-				CDB44DF22850A83B00DDBE87 /* web3.swift in Frameworks */,
+				CDB44F0C2853331500DDBE87 /* null in Frameworks */,
+				CDB44DF42850A84A00DDBE87 /* null in Frameworks */,
+				CDB44DF22850A83B00DDBE87 /* null in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,7 +225,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CD138218284FC20400A24CF1 = {
+		CD138218284FC20400A24CF1 /* PBXGroup */ = {
 			isa = PBXGroup;
 			children = (
 				CDB44F0A285331EC00DDBE87 /* cryptoPass (iOS).entitlements */,
@@ -459,9 +459,9 @@
 			);
 			name = "cryptoPass (iOS)";
 			packageProductDependencies = (
-				CDB44DB8284FC32600DDBE87 /* SFSafeSymbols */,
-				CDB44DD0284FD3F600DDBE87 /* web3.swift */,
-				CDB44E6128531FED00DDBE87 /* Valet */,
+				CDB44DB8284FC32600DDBE87 /* XCSwiftPackageProductDependency */,
+				CDB44DD0284FD3F600DDBE87 /* XCSwiftPackageProductDependency */,
+				CDB44E6128531FED00DDBE87 /* XCSwiftPackageProductDependency */,
 			);
 			productName = "cryptoPass (iOS)";
 			productReference = CD138228284FC20500A24CF1 /* cryptoPass.app */;
@@ -481,9 +481,9 @@
 			);
 			name = "cryptoPass (macOS)";
 			packageProductDependencies = (
-				CDB44DF12850A83B00DDBE87 /* web3.swift */,
-				CDB44DF32850A84A00DDBE87 /* SFSafeSymbols */,
-				CDB44F0B2853331500DDBE87 /* Valet */,
+				CDB44DF12850A83B00DDBE87 /* XCSwiftPackageProductDependency */,
+				CDB44DF32850A84A00DDBE87 /* XCSwiftPackageProductDependency */,
+				CDB44F0B2853331500DDBE87 /* XCSwiftPackageProductDependency */,
 			);
 			productName = "cryptoPass (macOS)";
 			productReference = CD13822E284FC20500A24CF1 /* cryptoPass.app */;
@@ -510,7 +510,7 @@
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CD138219284FC20400A24CF1 /* Project object */ = {
+		CD138219284FC20400A24CF1 = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
@@ -525,11 +525,11 @@
 					};
 					CDB44EC628532CFA00DDBE87 = {
 						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = CD138227284FC20500A24CF1;
+						TestTargetID = CD138227284FC20500A24CF1 /* cryptoPass (iOS) */;
 					};
 				};
 			};
-			buildConfigurationList = CD13821C284FC20400A24CF1 /* Build configuration list for PBXProject "cryptoPass" */;
+			buildConfigurationList = CD13821C284FC20400A24CF1 /* Build configuration list for PBXProject "cryptoPass (iOS)" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -537,11 +537,11 @@
 				en,
 				Base,
 			);
-			mainGroup = CD138218284FC20400A24CF1;
+			mainGroup = CD138218284FC20400A24CF1 /* PBXGroup */;
 			packageReferences = (
-				CDB44DB7284FC32600DDBE87 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */,
-				CDB44DCF284FD3F600DDBE87 /* XCRemoteSwiftPackageReference "web3" */,
-				CDB44E6028531FED00DDBE87 /* XCRemoteSwiftPackageReference "Valet" */,
+				CDB44DB7284FC32600DDBE87 /* XCRemoteSwiftPackageReference */,
+				CDB44DCF284FD3F600DDBE87 /* XCRemoteSwiftPackageReference */,
+				CDB44E6028531FED00DDBE87 /* XCRemoteSwiftPackageReference */,
 			);
 			productRefGroup = CD138229284FC20500A24CF1 /* Products */;
 			projectDirPath = "";
@@ -834,7 +834,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "cryptoPass (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = P9KK452K8P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -851,7 +851,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = v1.3.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sirilee.cryptoPassPlus;
 				PRODUCT_NAME = cryptoPass;
 				SDKROOT = iphoneos;
@@ -869,7 +869,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "cryptoPass (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = P9KK452K8P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -886,7 +886,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = v1.3.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sirilee.cryptoPassPlus;
 				PRODUCT_NAME = cryptoPass;
 				SDKROOT = iphoneos;
@@ -906,7 +906,7 @@
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = P9KK452K8P;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -917,7 +917,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = v1.3.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sirilee.cryptoPass;
 				PRODUCT_NAME = cryptoPass;
 				SDKROOT = macosx;
@@ -934,7 +934,7 @@
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = P9KK452K8P;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -945,7 +945,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = v1.3.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sirilee.cryptoPass;
 				PRODUCT_NAME = cryptoPass;
 				SDKROOT = macosx;
@@ -959,11 +959,11 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = P9KK452K8P;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = v1.3.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sirilee.Tests-Shared";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -979,11 +979,11 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = P9KK452K8P;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = v1.3.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sirilee.Tests-Shared";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -998,7 +998,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CD13821C284FC20400A24CF1 /* Build configuration list for PBXProject "cryptoPass" */ = {
+		CD13821C284FC20400A24CF1 /* Build configuration list for PBXProject "cryptoPass (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CD138253284FC20500A24CF1 /* Debug */,
@@ -1037,25 +1037,25 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CDB44DB7284FC32600DDBE87 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */ = {
+		CDB44DB7284FC32600DDBE87 /* XCRemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SFSafeSymbols/SFSafeSymbols";
+			repositoryURL = https://github.com/SFSafeSymbols/SFSafeSymbols;
 			requirement = {
 				branch = stable;
 				kind = branch;
 			};
 		};
-		CDB44DCF284FD3F600DDBE87 /* XCRemoteSwiftPackageReference "web3" */ = {
+		CDB44DCF284FD3F600DDBE87 /* XCRemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/argentlabs/web3.swift";
+			repositoryURL = https://github.com/argentlabs/web3.swift;
 			requirement = {
 				kind = exactVersion;
 				version = 1.2.0;
 			};
 		};
-		CDB44E6028531FED00DDBE87 /* XCRemoteSwiftPackageReference "Valet" */ = {
+		CDB44E6028531FED00DDBE87 /* XCRemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/square/Valet";
+			repositoryURL = https://github.com/square/Valet;
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 4.0.0;
@@ -1064,34 +1064,34 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CDB44DB8284FC32600DDBE87 /* SFSafeSymbols */ = {
+		CDB44DB8284FC32600DDBE87 /* XCSwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CDB44DB7284FC32600DDBE87 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;
+			package = CDB44DB7284FC32600DDBE87 /* XCRemoteSwiftPackageReference */;
 			productName = SFSafeSymbols;
 		};
-		CDB44DD0284FD3F600DDBE87 /* web3.swift */ = {
+		CDB44DD0284FD3F600DDBE87 /* XCSwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CDB44DCF284FD3F600DDBE87 /* XCRemoteSwiftPackageReference "web3" */;
+			package = CDB44DCF284FD3F600DDBE87 /* XCRemoteSwiftPackageReference */;
 			productName = web3.swift;
 		};
-		CDB44DF12850A83B00DDBE87 /* web3.swift */ = {
+		CDB44DF12850A83B00DDBE87 /* XCSwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CDB44DCF284FD3F600DDBE87 /* XCRemoteSwiftPackageReference "web3" */;
+			package = CDB44DCF284FD3F600DDBE87 /* XCRemoteSwiftPackageReference */;
 			productName = web3.swift;
 		};
-		CDB44DF32850A84A00DDBE87 /* SFSafeSymbols */ = {
+		CDB44DF32850A84A00DDBE87 /* XCSwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CDB44DB7284FC32600DDBE87 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;
+			package = CDB44DB7284FC32600DDBE87 /* XCRemoteSwiftPackageReference */;
 			productName = SFSafeSymbols;
 		};
-		CDB44E6128531FED00DDBE87 /* Valet */ = {
+		CDB44E6128531FED00DDBE87 /* XCSwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CDB44E6028531FED00DDBE87 /* XCRemoteSwiftPackageReference "Valet" */;
+			package = CDB44E6028531FED00DDBE87 /* XCRemoteSwiftPackageReference */;
 			productName = Valet;
 		};
-		CDB44F0B2853331500DDBE87 /* Valet */ = {
+		CDB44F0B2853331500DDBE87 /* XCSwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CDB44E6028531FED00DDBE87 /* XCRemoteSwiftPackageReference "Valet" */;
+			package = CDB44E6028531FED00DDBE87 /* XCRemoteSwiftPackageReference */;
 			productName = Valet;
 		};
 /* End XCSwiftPackageProductDependency section */
@@ -1109,5 +1109,5 @@
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = CD138219284FC20400A24CF1 /* Project object */;
+	rootObject = CD138219284FC20400A24CF1;
 }
