@@ -135,7 +135,7 @@ struct GetSecretSizeResponse: ABIResponse {
 
 
 struct CryptoPass{
-    let contractAddress = EthereumAddress(Environments.contractAddress!)
+    let contractAddress = EthereumAddress(Environments.contractAddress)
     let client: EthereumClient
     let account: EthereumAccount
     let privateKey: Data

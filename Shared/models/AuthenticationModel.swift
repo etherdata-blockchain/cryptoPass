@@ -8,23 +8,21 @@
 import Foundation
 import LocalAuthentication
 
-
-
-class AuthenticationModel: ObservableObject{
+class AuthenticationModel: ObservableObject {
     private var context = LAContext()
-    
-    func authenticate(completion: @escaping (_ isAuthenticated: Bool, _ hasError: Bool) -> ()){
+
+    func authenticate(completion: @escaping (_ isAuthenticated: Bool, _ hasError: Bool) -> ()) {
         var error: NSError?
         if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
-                // it's possible, so go ahead and use it
-                let reason = "We need to unlock your data."
-                context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
-                    if success {
-                        completion(true, false)
-                    } else {
-                       completion(false, false)
-                    }
+            // it's possible, so go ahead and use it
+            let reason = "We need to unlock your data."
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, _ in
+                if success {
+                    completion(true, false)
+                } else {
+                    completion(false, false)
                 }
+            }
         } else {
             completion(false, true)
         }

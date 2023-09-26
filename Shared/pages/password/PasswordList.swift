@@ -5,9 +5,9 @@
 //  Created by Qiwei Li on 6/8/22.
 //
 
+import BigInt
 import SwiftUI
 import web3
-import BigInt
 
 struct PasswordList: View {
     @EnvironmentObject var userAccountModel: UserAccountModel
@@ -16,14 +16,10 @@ struct PasswordList: View {
     @EnvironmentObject var transactionModel: TransactionModel
     @EnvironmentObject var passwordListModel: PasswordListModel
     
-
-    
     var body: some View {
-        Group{
-            NavigationLink(destination:  PasswordForm(), tag: 1, selection: $passwordListModel.selection){
-                
-            }
-            List{
+        Group {
+            NavigationLink(destination: PasswordForm(), tag: 1, selection: $passwordListModel.selection) {}
+            List {
                 Section(header: Text("Blockchain info")) {
                     InfoCard(title: "BlockNumber", subtitle: "\(passwordListModel.blockNumber)", color: .orange, unit: "blocks", icon: .boltBatteryblock)
                     
@@ -32,32 +28,29 @@ struct PasswordList: View {
                     InfoCard(title: "Password Count", subtitle: "\(passwordListModel.passwordSize)", color: .orange, unit: "", icon: .boltBatteryblock)
                 }
                 
-                
                 Section(header: Text("Passwords")) {
-                    ForEach(passwordListModel.passwords){ password in
+                    ForEach(passwordListModel.passwords) { password in
                         NavigationLink(destination: PasswordForm(editMode: false, password: password)) {
                             PasswordRow(password: password)
                         }
                     }
-                    .onDelete{
+                    .onDelete {
                         indexSet in
-                        Task{
+                        Task {
                             await delete(at: indexSet)
                         }
                     }
-                    
                 }
-                
             }
             .listStyle(InsetGroupedListStyle())
-            .toolbar{
-                ToolbarItem(placement: .navigationBarLeading){
-                    Button(action: { userAccountModel.resetAccount() }){
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: { userAccountModel.resetAccount() }) {
                         Image(systemSymbol: .externaldriveFill)
                     }
                 }
-                ToolbarItem(placement: .navigationBarTrailing){
-                    Button(action: { passwordListModel.selection = 1 }){
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: { passwordListModel.selection = 1 }) {
                         Image(systemSymbol: .plus)
                     }
                 }
@@ -68,18 +61,18 @@ struct PasswordList: View {
             print("BlockNumber: \(passwordListModel.blockNumber)")
             await fetchBlockchainData(isRefresh: true)
         }
-        .onReceive(userAccountModel.$userAccount){ _ in
+        .onReceive(userAccountModel.$userAccount) { _ in
             Task {
                 await fetchBlockchainData()
             }
         }
-        .onReceive(transactionModel.$transactionReceipt){
+        .onReceive(transactionModel.$transactionReceipt) {
             _ in
             Task {
                 await fetchBlockchainData()
             }
         }
-        .alert(isPresented: $passwordListModel.hasError){
+        .alert(isPresented: $passwordListModel.hasError) {
             Alert(title: Text("Error"), message: Text(passwordListModel.error!), dismissButton: .default(Text("ok")))
         }
         .task {
@@ -92,7 +85,7 @@ struct PasswordList: View {
     
     func delete(at offsets: IndexSet) async {
         let index = offsets.first
-        if let cryptoPass = cryptoPassModel.client{
+        if let cryptoPass = cryptoPassModel.client {
             if let index = index {
                 let transaction = try! await cryptoPass.prepareDeleteTransaction(at: BigUInt(index))
                 transactionModel.showConfirmation(transaction: transaction)
@@ -105,17 +98,17 @@ struct PasswordList: View {
      */
     private func fetchBlockchainData(isRefresh: Bool = false) async {
         passwordListModel.update()
-        withAnimation{
-            Task{
-                do{
-                    if let userAccount = userAccountModel.userAccount{
+        withAnimation {
+            Task {
+                do {
+                    if let userAccount = userAccountModel.userAccount {
                         passwordListModel.blockNumber = try await ethereumModel.ethereumClient.eth_blockNumber()
-                        passwordListModel.accountBalance = BigInt(try await ethereumModel.ethereumClient.eth_getBalance(address: userAccount.address, block: EthereumBlock.Latest))
+                        passwordListModel.accountBalance = try BigInt(await ethereumModel.ethereumClient.eth_getBalance(address: userAccount.address, block: EthereumBlock.Latest))
                         
-                        if let cryptoPass = cryptoPassModel.client{
+                        if let cryptoPass = cryptoPassModel.client {
                             passwordListModel.passwordSize = try await cryptoPass.getSecretSize()
-                            if passwordListModel.passwordSize > 0{
-                                passwordListModel.passwords = try await cryptoPass.getSecretsInRange(start: 0, end: passwordListModel.passwordSize).map{
+                            if passwordListModel.passwordSize > 0 {
+                                passwordListModel.passwords = try await cryptoPass.getSecretsInRange(start: 0, end: passwordListModel.passwordSize).map {
                                     password in
                                     CommonPassword.from(password: password)!
                                 }
@@ -125,7 +118,7 @@ struct PasswordList: View {
                         }
                     }
                     
-                } catch{
+                } catch {
                     print(error.localizedDescription)
                     passwordListModel.hasError = true
                     passwordListModel.error = error.localizedDescription

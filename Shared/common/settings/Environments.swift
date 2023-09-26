@@ -10,7 +10,7 @@ import Foundation
 /**
  System environments
  */
-struct Environments{
-    static let rpc = Bundle.main.object(forInfoDictionaryKey: "RPC_ENDPOINT") as? String
-    static let contractAddress = Bundle.main.object(forInfoDictionaryKey: "CONTRACT") as? String
+struct Environments {
+    static let rpc = RPC_URL
+    static let contractAddress = CONTRACT_ADDRESS
 }

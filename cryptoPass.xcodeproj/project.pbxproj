@@ -17,6 +17,8 @@
 		CD138250284FC20500A24CF1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD138222284FC20500A24CF1 /* Persistence.swift */; };
 		CD138251284FC20500A24CF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD138223284FC20500A24CF1 /* Assets.xcassets */; };
 		CD138252284FC20500A24CF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD138223284FC20500A24CF1 /* Assets.xcassets */; };
+		CD6388992AC2CB2600401D7E /* secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6388982AC2CB2600401D7E /* secrets.swift */; };
+		CD63889A2AC2CB2600401D7E /* secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6388982AC2CB2600401D7E /* secrets.swift */; };
 		CDAF099F28536C9B003AD86B /* LoginRequiredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAF099E28536C9B003AD86B /* LoginRequiredView.swift */; };
 		CDAF09A028536C9B003AD86B /* LoginRequiredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAF099E28536C9B003AD86B /* LoginRequiredView.swift */; };
 		CDAF09A228536CC0003AD86B /* LoginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAF09A128536CC0003AD86B /* LoginError.swift */; };
@@ -139,11 +141,10 @@
 		CD138228284FC20500A24CF1 /* cryptoPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cryptoPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD13822E284FC20500A24CF1 /* cryptoPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cryptoPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD138230284FC20500A24CF1 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		CD6388982AC2CB2600401D7E /* secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secrets.swift; sourceTree = "<group>"; };
 		CDAF099E28536C9B003AD86B /* LoginRequiredView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequiredView.swift; sourceTree = "<group>"; };
 		CDAF09A128536CC0003AD86B /* LoginError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginError.swift; sourceTree = "<group>"; };
 		CDAF09A42853704B003AD86B /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
-		CDAF09A72853718E003AD86B /* secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = secrets.xcconfig; sourceTree = "<group>"; };
-		CDAF09A82853722D003AD86B /* cryptoPass--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "cryptoPass--iOS--Info.plist"; sourceTree = "<group>"; };
 		CDB44DBB284FC34500DDBE87 /* InfoMationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoMationDetailView.swift; sourceTree = "<group>"; };
 		CDB44DBE284FC43E00DDBE87 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		CDB44DC2284FC55800DDBE87 /* Introduction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Introduction.swift; sourceTree = "<group>"; };
@@ -227,8 +228,6 @@
 		CD138218284FC20400A24CF1 = {
 			isa = PBXGroup;
 			children = (
-				CDAF09A82853722D003AD86B /* cryptoPass--iOS--Info.plist */,
-				CDAF09A72853718E003AD86B /* secrets.xcconfig */,
 				CDB44F0A285331EC00DDBE87 /* cryptoPass (iOS).entitlements */,
 				CD13821D284FC20500A24CF1 /* Shared */,
 				CD13822F284FC20500A24CF1 /* macOS */,
@@ -250,6 +249,7 @@
 				CD138222284FC20500A24CF1 /* Persistence.swift */,
 				CD138223284FC20500A24CF1 /* Assets.xcassets */,
 				CD13821E284FC20500A24CF1 /* cryptoPass.xcdatamodeld */,
+				CD6388982AC2CB2600401D7E /* secrets.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -586,6 +586,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDB44E342851CF9500DDBE87 /* EthereumModel.swift in Sources */,
+				CD6388992AC2CB2600401D7E /* secrets.swift in Sources */,
 				CDB44E082850DD0400DDBE87 /* WebsiteFormView.swift in Sources */,
 				CDB44E4A2851F74300DDBE87 /* TransactionStatus+extension.swift in Sources */,
 				CDB44DCA284FCCDE00DDBE87 /* IntroductionPage.swift in Sources */,
@@ -644,6 +645,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDB44E352851CF9500DDBE87 /* EthereumModel.swift in Sources */,
+				CD63889A2AC2CB2600401D7E /* secrets.swift in Sources */,
 				CDB44E55285265CF00DDBE87 /* PasswordFormModel.swift in Sources */,
 				CDB44E092850DD0400DDBE87 /* WebsiteFormView.swift in Sources */,
 				CDB44DCB284FCCDE00DDBE87 /* IntroductionPage.swift in Sources */,
@@ -718,7 +720,6 @@
 /* Begin XCBuildConfiguration section */
 		CD138253284FC20500A24CF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CDAF09A72853718E003AD86B /* secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -777,7 +778,6 @@
 		};
 		CD138254284FC20500A24CF1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CDAF09A72853718E003AD86B /* secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -829,7 +829,6 @@
 		};
 		CD138256284FC20500A24CF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CDAF09A72853718E003AD86B /* secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -865,7 +864,6 @@
 		};
 		CD138257284FC20500A24CF1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CDAF09A72853718E003AD86B /* secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -902,7 +900,6 @@
 		};
 		CD138259284FC20500A24CF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CDAF09A72853718E003AD86B /* secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -931,7 +928,6 @@
 		};
 		CD13825A284FC20500A24CF1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CDAF09A72853718E003AD86B /* secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -960,7 +956,6 @@
 		};
 		CDB44ECE28532CFA00DDBE87 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CDAF09A72853718E003AD86B /* secrets.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1054,8 +1049,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/argentlabs/web3.swift";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				kind = exactVersion;
+				version = 1.2.0;
 			};
 		};
 		CDB44E6028531FED00DDBE87 /* XCRemoteSwiftPackageReference "Valet" */ = {

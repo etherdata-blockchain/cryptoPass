@@ -34,7 +34,7 @@ struct ConfirmationPage: View {
                         
                     }
                 }
-                if let transaction = transaction {
+                if transaction != nil {
                     Form{
                         Section("Transaction Summary") {
                             FormTextField(leading: {Text("Value")}) {
@@ -147,7 +147,7 @@ struct ConfirmationPage: View {
             Task {
                 if let transaction =  transactionModel.transaction{
                     do {
-                        gasFee = try await ethereumModel.ethereumClient.eth_estimateGas(transaction, withAccount: userAccountModel.userAccount!)
+                        gasFee = try await ethereumModel.ethereumClient.eth_estimateGas(transaction)
                         gasPrice = try await ethereumModel.ethereumClient.eth_gasPrice()
                         nonce = try await ethereumModel.ethereumClient.eth_getTransactionCount(address: userAccountModel.userAccount!.address, block: .Latest)
                         chainId = try await ethereumModel.ethereumClient.chainId()

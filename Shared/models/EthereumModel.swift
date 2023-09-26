@@ -12,7 +12,7 @@ class EthereumModel: ObservableObject{
     @Published var ethereumClient: EthereumClient
     
     init(){
-        let clientUrl = URL(string: Environments.rpc!)
+        let clientUrl = URL(string: Environments.rpc)
         self.ethereumClient = EthereumClient(url: clientUrl!)
     }
 }

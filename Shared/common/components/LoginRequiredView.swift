@@ -9,18 +9,17 @@ import SwiftUI
 
 struct LoginRequiredView<Content: View, Login: View>: View {
     @EnvironmentObject var authenticationModel: AuthenticationModel
-    
+
     @ViewBuilder let loginScreen: () -> Login
     @ViewBuilder let child: () -> Content
 
-    
     @State var hasLogined = false
     @State var error: AuthenticationError?
     @State var hasError = false
-    
+
     var body: some View {
-        Group{
-            if hasLogined{
+        Group {
+            if hasLogined {
                 child()
             } else {
                 loginScreen()
@@ -28,22 +27,25 @@ struct LoginRequiredView<Content: View, Login: View>: View {
         }
         .alert(isPresented: $hasError, error: error, actions: {
             Button {
-             hasError = false
+                hasError = false
             } label: {
                 Text("ok")
             }
 
         })
-        .onAppear{
+        .onAppear {
+            if hasLogined {
+                return
+            }
             authenticationModel.authenticate { isAuthenticated, hasError in
-                if isAuthenticated{
+                if isAuthenticated {
                     hasLogined = true
                 } else {
                     self.hasError = true
                     self.error = .invalidIdentity
                 }
-                
-                if hasError{
+
+                if hasError {
                     self.hasError = true
                     self.error = .invalidDevice
                 }

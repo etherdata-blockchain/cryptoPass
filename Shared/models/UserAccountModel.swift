@@ -8,42 +8,44 @@
 import Foundation
 import web3
 
-
-class UserAccountModel: ObservableObject{
+class UserAccountModel: ObservableObject {
     @Published var userAccount: EthereumAccount?
     @Published var hasInitAccount: Bool = false
     @Published var shouldInitAccount = false
     @Published var privateKey: Data?
     private let storage = EthereumKeyChainStorage()
-    
-    func initialize(){
+
+    func initialize() {
+        if hasInitAccount {
+            return
+        }
         do {
             privateKey = try storage.loadPrivateKey()
-            userAccount = try EthereumAccount.init(keyStorage: storage)
+            userAccount = try EthereumAccount(keyStorage: storage)
             shouldInitAccount = false
             hasInitAccount = true
         } catch PrivateKeyError.privateKeyNotFound {
             shouldInitAccount = true
             print("No previous stored private key")
-        }  catch{
+        } catch {
             print(error.localizedDescription)
         }
     }
-    
-    func importAccount(privateKey: String) throws{
+
+    func importAccount(privateKey: String) throws {
         let keyStoreage = EthereumKeyChainStorage()
-        //TODO: Replace 123
+        // TODO: Replace 123
         userAccount = try EthereumAccount.importAccount(keyStorage: keyStoreage, privateKey: privateKey)
         self.privateKey = privateKey.web3.hexData
     }
-    
-    func resetAccount(){
+
+    func resetAccount() {
         userAccount = nil
         hasInitAccount = false
         shouldInitAccount = true
     }
-    
-    func finishSetup(){
+
+    func finishSetup() {
         hasInitAccount = true
         shouldInitAccount = false
     }
